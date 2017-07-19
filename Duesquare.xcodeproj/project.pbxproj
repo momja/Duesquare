@@ -1,0 +1,543 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9D5DFC71F16FCAC00F50CC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D5DFC61F16FCAC00F50CC0 /* AppDelegate.swift */; };
+		C9D5DFC91F16FCAC00F50CC0 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9D5DFC81F16FCAC00F50CC0 /* GameScene.sks */; };
+		C9D5DFCB1F16FCAC00F50CC0 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9D5DFCA1F16FCAC00F50CC0 /* Actions.sks */; };
+		C9D5DFCD1F16FCAC00F50CC0 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D5DFCC1F16FCAC00F50CC0 /* GameScene.swift */; };
+		C9D5DFCF1F16FCAC00F50CC0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D5DFCE1F16FCAC00F50CC0 /* GameViewController.swift */; };
+		C9D5DFD21F16FCAC00F50CC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D5DFD01F16FCAC00F50CC0 /* Main.storyboard */; };
+		C9D5DFD41F16FCAC00F50CC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9D5DFD31F16FCAC00F50CC0 /* Assets.xcassets */; };
+		C9D5DFD71F16FCAC00F50CC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D5DFD51F16FCAC00F50CC0 /* LaunchScreen.storyboard */; };
+		C9D5DFE21F16FCAC00F50CC0 /* DuesquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D5DFE11F16FCAC00F50CC0 /* DuesquareTests.swift */; };
+		C9D5DFED1F16FCAC00F50CC0 /* DuesquareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D5DFEC1F16FCAC00F50CC0 /* DuesquareUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9D5DFDE1F16FCAC00F50CC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9D5DFBB1F16FCAC00F50CC0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9D5DFC21F16FCAC00F50CC0;
+			remoteInfo = Duesquare;
+		};
+		C9D5DFE91F16FCAC00F50CC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9D5DFBB1F16FCAC00F50CC0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9D5DFC21F16FCAC00F50CC0;
+			remoteInfo = Duesquare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C9D5DFC31F16FCAC00F50CC0 /* Duesquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Duesquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9D5DFC61F16FCAC00F50CC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C9D5DFC81F16FCAC00F50CC0 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		C9D5DFCA1F16FCAC00F50CC0 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		C9D5DFCC1F16FCAC00F50CC0 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		C9D5DFCE1F16FCAC00F50CC0 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		C9D5DFD11F16FCAC00F50CC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9D5DFD31F16FCAC00F50CC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9D5DFD61F16FCAC00F50CC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C9D5DFD81F16FCAC00F50CC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9D5DFDD1F16FCAC00F50CC0 /* DuesquareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DuesquareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9D5DFE11F16FCAC00F50CC0 /* DuesquareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuesquareTests.swift; sourceTree = "<group>"; };
+		C9D5DFE31F16FCAC00F50CC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9D5DFE81F16FCAC00F50CC0 /* DuesquareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DuesquareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9D5DFEC1F16FCAC00F50CC0 /* DuesquareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuesquareUITests.swift; sourceTree = "<group>"; };
+		C9D5DFEE1F16FCAC00F50CC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9D5DFC01F16FCAC00F50CC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9D5DFDA1F16FCAC00F50CC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9D5DFE51F16FCAC00F50CC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9D5DFBA1F16FCAC00F50CC0 = {
+			isa = PBXGroup;
+			children = (
+				C9D5DFC51F16FCAC00F50CC0 /* Duesquare */,
+				C9D5DFE01F16FCAC00F50CC0 /* DuesquareTests */,
+				C9D5DFEB1F16FCAC00F50CC0 /* DuesquareUITests */,
+				C9D5DFC41F16FCAC00F50CC0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9D5DFC41F16FCAC00F50CC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9D5DFC31F16FCAC00F50CC0 /* Duesquare.app */,
+				C9D5DFDD1F16FCAC00F50CC0 /* DuesquareTests.xctest */,
+				C9D5DFE81F16FCAC00F50CC0 /* DuesquareUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9D5DFC51F16FCAC00F50CC0 /* Duesquare */ = {
+			isa = PBXGroup;
+			children = (
+				C9D5DFC61F16FCAC00F50CC0 /* AppDelegate.swift */,
+				C9D5DFC81F16FCAC00F50CC0 /* GameScene.sks */,
+				C9D5DFCA1F16FCAC00F50CC0 /* Actions.sks */,
+				C9D5DFCC1F16FCAC00F50CC0 /* GameScene.swift */,
+				C9D5DFCE1F16FCAC00F50CC0 /* GameViewController.swift */,
+				C9D5DFD01F16FCAC00F50CC0 /* Main.storyboard */,
+				C9D5DFD31F16FCAC00F50CC0 /* Assets.xcassets */,
+				C9D5DFD51F16FCAC00F50CC0 /* LaunchScreen.storyboard */,
+				C9D5DFD81F16FCAC00F50CC0 /* Info.plist */,
+			);
+			path = Duesquare;
+			sourceTree = "<group>";
+		};
+		C9D5DFE01F16FCAC00F50CC0 /* DuesquareTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9D5DFE11F16FCAC00F50CC0 /* DuesquareTests.swift */,
+				C9D5DFE31F16FCAC00F50CC0 /* Info.plist */,
+			);
+			path = DuesquareTests;
+			sourceTree = "<group>";
+		};
+		C9D5DFEB1F16FCAC00F50CC0 /* DuesquareUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C9D5DFEC1F16FCAC00F50CC0 /* DuesquareUITests.swift */,
+				C9D5DFEE1F16FCAC00F50CC0 /* Info.plist */,
+			);
+			path = DuesquareUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9D5DFC21F16FCAC00F50CC0 /* Duesquare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9D5DFF11F16FCAC00F50CC0 /* Build configuration list for PBXNativeTarget "Duesquare" */;
+			buildPhases = (
+				C9D5DFBF1F16FCAC00F50CC0 /* Sources */,
+				C9D5DFC01F16FCAC00F50CC0 /* Frameworks */,
+				C9D5DFC11F16FCAC00F50CC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Duesquare;
+			productName = Duesquare;
+			productReference = C9D5DFC31F16FCAC00F50CC0 /* Duesquare.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9D5DFDC1F16FCAC00F50CC0 /* DuesquareTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9D5DFF41F16FCAC00F50CC0 /* Build configuration list for PBXNativeTarget "DuesquareTests" */;
+			buildPhases = (
+				C9D5DFD91F16FCAC00F50CC0 /* Sources */,
+				C9D5DFDA1F16FCAC00F50CC0 /* Frameworks */,
+				C9D5DFDB1F16FCAC00F50CC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9D5DFDF1F16FCAC00F50CC0 /* PBXTargetDependency */,
+			);
+			name = DuesquareTests;
+			productName = DuesquareTests;
+			productReference = C9D5DFDD1F16FCAC00F50CC0 /* DuesquareTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C9D5DFE71F16FCAC00F50CC0 /* DuesquareUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9D5DFF71F16FCAC00F50CC0 /* Build configuration list for PBXNativeTarget "DuesquareUITests" */;
+			buildPhases = (
+				C9D5DFE41F16FCAC00F50CC0 /* Sources */,
+				C9D5DFE51F16FCAC00F50CC0 /* Frameworks */,
+				C9D5DFE61F16FCAC00F50CC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9D5DFEA1F16FCAC00F50CC0 /* PBXTargetDependency */,
+			);
+			name = DuesquareUITests;
+			productName = DuesquareUITests;
+			productReference = C9D5DFE81F16FCAC00F50CC0 /* DuesquareUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9D5DFBB1F16FCAC00F50CC0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Maxwell James Omdal";
+				TargetAttributes = {
+					C9D5DFC21F16FCAC00F50CC0 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = EHPBHF3VYQ;
+						ProvisioningStyle = Automatic;
+					};
+					C9D5DFDC1F16FCAC00F50CC0 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C9D5DFC21F16FCAC00F50CC0;
+					};
+					C9D5DFE71F16FCAC00F50CC0 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C9D5DFC21F16FCAC00F50CC0;
+					};
+				};
+			};
+			buildConfigurationList = C9D5DFBE1F16FCAC00F50CC0 /* Build configuration list for PBXProject "Duesquare" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9D5DFBA1F16FCAC00F50CC0;
+			productRefGroup = C9D5DFC41F16FCAC00F50CC0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9D5DFC21F16FCAC00F50CC0 /* Duesquare */,
+				C9D5DFDC1F16FCAC00F50CC0 /* DuesquareTests */,
+				C9D5DFE71F16FCAC00F50CC0 /* DuesquareUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9D5DFC11F16FCAC00F50CC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9D5DFD21F16FCAC00F50CC0 /* Main.storyboard in Resources */,
+				C9D5DFC91F16FCAC00F50CC0 /* GameScene.sks in Resources */,
+				C9D5DFD41F16FCAC00F50CC0 /* Assets.xcassets in Resources */,
+				C9D5DFD71F16FCAC00F50CC0 /* LaunchScreen.storyboard in Resources */,
+				C9D5DFCB1F16FCAC00F50CC0 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9D5DFDB1F16FCAC00F50CC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9D5DFE61F16FCAC00F50CC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9D5DFBF1F16FCAC00F50CC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9D5DFCD1F16FCAC00F50CC0 /* GameScene.swift in Sources */,
+				C9D5DFCF1F16FCAC00F50CC0 /* GameViewController.swift in Sources */,
+				C9D5DFC71F16FCAC00F50CC0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9D5DFD91F16FCAC00F50CC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9D5DFE21F16FCAC00F50CC0 /* DuesquareTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9D5DFE41F16FCAC00F50CC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9D5DFED1F16FCAC00F50CC0 /* DuesquareUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9D5DFDF1F16FCAC00F50CC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9D5DFC21F16FCAC00F50CC0 /* Duesquare */;
+			targetProxy = C9D5DFDE1F16FCAC00F50CC0 /* PBXContainerItemProxy */;
+		};
+		C9D5DFEA1F16FCAC00F50CC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9D5DFC21F16FCAC00F50CC0 /* Duesquare */;
+			targetProxy = C9D5DFE91F16FCAC00F50CC0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C9D5DFD01F16FCAC00F50CC0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9D5DFD11F16FCAC00F50CC0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C9D5DFD51F16FCAC00F50CC0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9D5DFD61F16FCAC00F50CC0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9D5DFEF1F16FCAC00F50CC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C9D5DFF01F16FCAC00F50CC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9D5DFF21F16FCAC00F50CC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EHPBHF3VYQ;
+				INFOPLIST_FILE = Duesquare/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Omdal.Duesquare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C9D5DFF31F16FCAC00F50CC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EHPBHF3VYQ;
+				INFOPLIST_FILE = Duesquare/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Omdal.Duesquare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		C9D5DFF51F16FCAC00F50CC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DuesquareTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Omdal.DuesquareTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Duesquare.app/Duesquare";
+			};
+			name = Debug;
+		};
+		C9D5DFF61F16FCAC00F50CC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DuesquareTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Omdal.DuesquareTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Duesquare.app/Duesquare";
+			};
+			name = Release;
+		};
+		C9D5DFF81F16FCAC00F50CC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = DuesquareUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Omdal.DuesquareUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Duesquare;
+			};
+			name = Debug;
+		};
+		C9D5DFF91F16FCAC00F50CC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = DuesquareUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Omdal.DuesquareUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Duesquare;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9D5DFBE1F16FCAC00F50CC0 /* Build configuration list for PBXProject "Duesquare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9D5DFEF1F16FCAC00F50CC0 /* Debug */,
+				C9D5DFF01F16FCAC00F50CC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9D5DFF11F16FCAC00F50CC0 /* Build configuration list for PBXNativeTarget "Duesquare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9D5DFF21F16FCAC00F50CC0 /* Debug */,
+				C9D5DFF31F16FCAC00F50CC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C9D5DFF41F16FCAC00F50CC0 /* Build configuration list for PBXNativeTarget "DuesquareTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9D5DFF51F16FCAC00F50CC0 /* Debug */,
+				C9D5DFF61F16FCAC00F50CC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C9D5DFF71F16FCAC00F50CC0 /* Build configuration list for PBXNativeTarget "DuesquareUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9D5DFF81F16FCAC00F50CC0 /* Debug */,
+				C9D5DFF91F16FCAC00F50CC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9D5DFBB1F16FCAC00F50CC0 /* Project object */;
+}
