@@ -17,7 +17,6 @@
 		C9D5DFD71F16FCAC00F50CC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D5DFD51F16FCAC00F50CC0 /* LaunchScreen.storyboard */; };
 		C9D5DFE21F16FCAC00F50CC0 /* DuesquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D5DFE11F16FCAC00F50CC0 /* DuesquareTests.swift */; };
 		C9D5DFED1F16FCAC00F50CC0 /* DuesquareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D5DFEC1F16FCAC00F50CC0 /* DuesquareUITests.swift */; };
-		C9DFA4701F28508A00317E56 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DFA46F1F28508A00317E56 /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +53,6 @@
 		C9D5DFE81F16FCAC00F50CC0 /* DuesquareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DuesquareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D5DFEC1F16FCAC00F50CC0 /* DuesquareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuesquareUITests.swift; sourceTree = "<group>"; };
 		C9D5DFEE1F16FCAC00F50CC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C9DFA46F1F28508A00317E56 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +60,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9DFA4701F28508A00317E56 /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +138,6 @@
 		C9DFA46E1F28508A00317E56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C9DFA46F1F28508A00317E56 /* iAd.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -438,11 +434,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EHPBHF3VYQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MoPubSDK/AdNetworkSupport/GoogleAdMob/SDK",
+					"$(PROJECT_DIR)/MoPubSDK/AdNetworkSupport/Millennial/SDK",
+				);
 				INFOPLIST_FILE = Duesquare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Omdal.Duesquare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -451,11 +454,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EHPBHF3VYQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MoPubSDK/AdNetworkSupport/GoogleAdMob/SDK",
+					"$(PROJECT_DIR)/MoPubSDK/AdNetworkSupport/Millennial/SDK",
+				);
 				INFOPLIST_FILE = Duesquare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Omdal.Duesquare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
