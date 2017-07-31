@@ -7,22 +7,30 @@
 //
 
 import SpriteKit
-import GameplayKit
+import GameKit
 
 var width: CGFloat = 0
 var height: CGFloat = 0
 
-let aimStick = SKNode()
-var scoreBlocks = [SKSpriteNode]()
-var scoreLabel = SKLabelNode()
-
-var saver1 = CGFloat(integerLiteral: 0)
-var saver3 = CGFloat(integerLiteral: 0)
-var presentBallsArray = [SKSpriteNode]()
-
-
 class GameScene: SKScene {
     
+
+    let colorArray = [(UIColor(red: 0, green: 255/255, blue: 0, alpha: 1)), (UIColor(red: 0, green: 0, blue: 255/255, alpha: 1)), (UIColor(red: 255/255, green: 251/255, blue: 0/255, alpha: 1)), (UIColor(red: 255/255, green: 147/255, blue: 0/255, alpha: 1))]
+    
+    
+    let aimStick = SKNode()
+    var scoreBlocks = [SKSpriteNode]()
+    var scoreLabel = SKLabelNode()
+    var countdownLabel = SKLabelNode()
+    let gameover = GameOverScreen()
+    
+    var saver1 = CGFloat(integerLiteral: 0)
+    var saver3 = CGFloat(integerLiteral: 0)
+    var presentBallsArray = [SKSpriteNode]()
+    var delta = CGFloat(0)
+    var xinitial = CGFloat(0)
+    var fingerDownLeft = false
+    var fingerDownRight = false
     
     override func didMove(to view: SKView) {
         self.physicsWorld.gravity = CGVector(dx: 0.0, dy: -6.0)
@@ -33,15 +41,17 @@ class GameScene: SKScene {
         left.colorBlendFactor = 1.0
         left.position.x = -117
         left.physicsBody = SKPhysicsBody(texture: texture, size: texture.size())
+        left.physicsBody?.usesPreciseCollisionDetection = true
         left.physicsBody?.affectedByGravity = false
         left.physicsBody?.pinned = true
         left.physicsBody?.isDynamic = false
-        left.physicsBody?.restitution = 0.0
+        left.physicsBody?.restitution = 0.2
         let textureRight = SKTexture(image: #imageLiteral(resourceName: "funnel-right"))
         let right = SKSpriteNode(texture: textureRight, color: UIColor.red, size: texture.size())
         right.colorBlendFactor = 1.0
         right.position.x = 117
         right.physicsBody = SKPhysicsBody(texture: textureRight, size: texture.size())
+        right.physicsBody?.usesPreciseCollisionDetection = true
         right.physicsBody?.affectedByGravity = false
         right.physicsBody?.pinned = true
         right.physicsBody?.isDynamic = false
@@ -49,35 +59,103 @@ class GameScene: SKScene {
         aimStick.addChild(left)
         aimStick.addChild(right)
         self.addChild(aimStick)
-        scoreBlocks = [(self.childNode(withName: "score_block_1") as? SKSpriteNode)!, (self.childNode(withName: "score_block_2") as? SKSpriteNode)!, (self.childNode(withName: "score_block_3") as? SKSpriteNode)!, (self.childNode(withName: "score_block_4") as? SKSpriteNode)!]
+        makeScoreBlocks()
         scoreLabel = (self.childNode(withName: "score_label") as? SKLabelNode)!
+        countdownLabel = (self.childNode(withName: "countdown_label") as? SKLabelNode)!
         colorScoreBlocks()
-        dropBall()
-        let wait = SKAction.wait(forDuration: 1.7)
-        let drop = SKAction.run {
-            
-            self.prepareNextDrop()
-        }
-        let sequence = SKAction.sequence([wait, drop])
-        run(SKAction.repeatForever(sequence))
-    }
-
-    func touchMoved(toPoint pos : CGPoint) {
-
-        aimStick.zRotation = saver1 + ((pos.x - saver3))/width*CGFloat.pi
+        
+        self.gameover.position = CGPoint(x: 0, y: -height + self.gameover.frame.height)
+        self.gameover.isHidden = true
+        self.addChild(self.gameover)
+        
+        prepareNextDrop()
     }
     
+    func makeScoreBlocks() {
+        for i in 0...3 {
+            let container = ScoreBlock(color: colorArray[i], position: CGPoint(x: width/4.0*CGFloat(i) - width/2.0 + width/8.0, y: -height/2.0))
+            self.addChild(container)
+            scoreBlocks.append(container)
+        }
+    }
+    
+    class ScoreBlock: SKSpriteNode {
+        init(color: UIColor, position: CGPoint) {
+            let texture = SKTexture(image: #imageLiteral(resourceName: "catcher"))
+            super.init(texture: texture, color: color, size: CGSize(width: width/4, height: texture.size().height))
+            self.colorBlendFactor = 1.0
+            self.position = position
+            self.physicsBody = SKPhysicsBody(texture: texture, size: CGSize(width: width/4, height: texture.size().height))
+            self.physicsBody?.pinned = true
+            self.physicsBody?.isDynamic = false
+            self.physicsBody?.affectedByGravity = false
+        }
+        
+        required init?(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    
+    func rotateByConstant() {
+        let angle: CGFloat = 1/70*CGFloat.pi
+        if fingerDownRight {
+            aimStick.run(SKAction.rotate(byAngle: -angle, duration: 0.1))
+        }
+        else if fingerDownLeft {
+            aimStick.run(SKAction.rotate(byAngle: angle, duration: 0.1))
+        }
+    }
+
+//    func touchMoved(toPoint pos : CGPoint) {
+//        var xfinal = pos.x - saver3
+//        delta = xfinal - xinitial
+//        if (delta > 20) {
+//            print("moving too fast: " + delta.description)
+//            xfinal = xinitial + 20
+////            saver3 += 20
+//        }
+//        else if (delta < -20) {
+//            print("moving too fast: " + delta.description)
+//            xfinal = xinitial - 20
+////            saver3 -= 20
+//        }
+//        let angle = saver1 + (xfinal)/width*CGFloat.pi
+////        let rotateAction = SKAction.rotate(byAngle: angle, duration: 0.1)
+////        aimStick.run(rotateAction)
+//        aimStick.zRotation = angle
+//        xinitial = xfinal
+//    }
+    
     func touchEnded(atPoint pos : CGPoint) {
-        saver1 = aimStick.zRotation
+//        saver1 = aimStick.zRotation
+        fingerDownLeft = false
+        fingerDownRight = false
     }
     
     func touchBegan(atPoint pos : CGPoint) {
-        saver3 = pos.x
+//        saver3 = pos.x
+        if gameover.isHidden == false {
+            if gameover.contains(pos) {
+                //let additionToCountdown: Int = gameover.touches(pos: pos)
+                //countdownLabel.text = String(additionToCountdown + Int(countdownLabel.text!)!)
+                gameover.touches(pos: pos)
+                self.isPaused = false
+            }
+        }
+
+        if pos.x < 0 {
+            fingerDownLeft = true
+        }
+        
+        else if pos.x > 0 {
+            fingerDownRight = true
+        }
+        
     }
     
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
-    }
+//    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
+//    }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         for t in touches { self.touchEnded(atPoint: t.location(in: self)) }
@@ -88,28 +166,13 @@ class GameScene: SKScene {
     }
     
     func prepareNextDrop() {
-        dropBall()
-    }
-    
-    class Ball: SKSpriteNode {
-        init() {
-            let circleTexture = SKTexture(image: #imageLiteral(resourceName: "white_ball_small"))
-            super.init(texture: circleTexture, color: UIColor.clear, size: circleTexture.size())
-            self.physicsBody = SKPhysicsBody(circleOfRadius: self.frame.size.height/2)
-            self.physicsBody?.restitution = 0.0
-            self.physicsBody?.friction = 0.0
-            let color = self.randomizeColor()
-            self.color = color
-            self.colorBlendFactor = 1.0
+        let wait = SKAction.wait(forDuration: 1.4)
+        let drop = SKAction.run {
+            
+            self.dropBall()
         }
-        
-        required init?(coder aDecoder: NSCoder) {
-            fatalError("init(coder:) has not been implemented")
-        }
-        
-        func randomizeDrop() -> CGFloat {
-            return CGFloat(arc4random_uniform(16)) - 8
-        }
+        let sequence = SKAction.sequence([wait, drop])
+        self.run(SKAction.repeatForever(sequence), withKey: "drop_sequence")
     }
     
     // prepare a new ball to be dropped
@@ -128,7 +191,6 @@ class GameScene: SKScene {
 //    }
     
     func colorScoreBlocks() {
-        let colorArray = [(UIColor(red: 0, green: 255/255, blue: 0, alpha: 1)), (UIColor(red: 0, green: 0, blue: 255/255, alpha: 1)), (UIColor(red: 255/255, green: 251/255, blue: 0/255, alpha: 1)), (UIColor(red: 255/255, green: 147/255, blue: 0/255, alpha: 1))]
         for i in 0...(colorArray.count - 1) {
             print(i)
             scoreBlocks[i].color = colorArray[i]
@@ -184,15 +246,53 @@ class GameScene: SKScene {
     }
     
     func gameOver() {
-        let gameOver = SKLabelNode(text: "Game Over")
-        gameOver.position = CGPoint(x: 0, y: 0)
-        gameOver.fontSize = 60
-        self.addChild(gameOver)
-        //self.isPaused = true
+        let currentLoss = Int(countdownLabel.text!)
+        if currentLoss == 9 {
+            countdownLabel.text = String(0)
+            self.gameover.moveAction(yLocation: 50)
+            self.gameover.createHomeScreenCountdown()
+            checkHighscore()
+            self.aimStick.isPaused = true
+            self.physicsWorld.speed = 0.0
+            self.removeAction(forKey: "drop_sequence")
+            for ball in presentBallsArray {
+                ball.removeFromParent()
+            }
+        }
+        else if currentLoss! > 1 {
+            countdownLabel.text = String(currentLoss! - 1)
+        }
+    }
+
+    func checkHighscore() {
+        var score: Int = 0
+        if (UserDefaults.standard.object(forKey: "highscore") != nil) {
+            score = UserDefaults.standard.object(forKey: "highscore") as! Int
+        }
+        if Int(scoreLabel.text!)! > score {
+            print("new highscore!")
+            UserDefaults.standard.set(Int(scoreLabel.text!), forKey: "highscore")
+            // Submit score to GC leaderboard
+            let bestScoreInt = GKScore(leaderboardIdentifier: "quadsquare_highscore_leaderboard")
+            bestScoreInt.value = Int64(score)
+            GKScore.report([bestScoreInt]) { (error) in
+                if error != nil {
+                    print(error!.localizedDescription)
+                } else {
+                    print("Best Score submitted to your Leaderboard!")
+                }
+            }
+        }
     }
     
     override func update(_ currentTime: TimeInterval) {
         checkBall()
+        if fingerDownLeft == true {
+            rotateByConstant()
+        }
+        else if fingerDownRight == true {
+            rotateByConstant()
+        }
     }
 }
 

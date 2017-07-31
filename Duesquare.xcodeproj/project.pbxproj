@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9AA7EEC1F2F93D7000965DB /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AA7EEB1F2F93D7000965DB /* Chartboost.framework */; };
+		C9AA7EEE1F2F93FC000965DB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AA7EED1F2F93FC000965DB /* StoreKit.framework */; };
+		C9AA7EF01F2F9402000965DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AA7EEF1F2F9402000965DB /* Foundation.framework */; };
+		C9AA7EF21F2F940D000965DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AA7EF11F2F940D000965DB /* CoreGraphics.framework */; };
+		C9AA7EF41F2F9414000965DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AA7EF31F2F9414000965DB /* UIKit.framework */; };
+		C9AA7EF81F2F9535000965DB /* chartboost.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AA7EF71F2F9535000965DB /* chartboost.m */; };
+		C9AA7EFA1F2FC8C0000965DB /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA7EF91F2FC8C0000965DB /* Ball.swift */; };
+		C9AA7EFC1F2FC926000965DB /* GameOverPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA7EFB1F2FC926000965DB /* GameOverPopup.swift */; };
+		C9AA7EFE1F2FC9E1000965DB /* Funnel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA7EFD1F2FC9E1000965DB /* Funnel.swift */; };
+		C9B484CE1F2D44D8003085C2 /* Homescreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B484CD1F2D44D8003085C2 /* Homescreen.swift */; };
+		C9B484D01F2D45F2003085C2 /* Homescreen.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9B484CF1F2D45F2003085C2 /* Homescreen.sks */; };
+		C9B484D21F2D9968003085C2 /* StoreScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9B484D11F2D9968003085C2 /* StoreScene.sks */; };
 		C9D5DFC71F16FCAC00F50CC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D5DFC61F16FCAC00F50CC0 /* AppDelegate.swift */; };
 		C9D5DFC91F16FCAC00F50CC0 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9D5DFC81F16FCAC00F50CC0 /* GameScene.sks */; };
 		C9D5DFCB1F16FCAC00F50CC0 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9D5DFCA1F16FCAC00F50CC0 /* Actions.sks */; };
@@ -17,6 +29,7 @@
 		C9D5DFD71F16FCAC00F50CC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D5DFD51F16FCAC00F50CC0 /* LaunchScreen.storyboard */; };
 		C9D5DFE21F16FCAC00F50CC0 /* DuesquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D5DFE11F16FCAC00F50CC0 /* DuesquareTests.swift */; };
 		C9D5DFED1F16FCAC00F50CC0 /* DuesquareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D5DFEC1F16FCAC00F50CC0 /* DuesquareUITests.swift */; };
+		C9F7A7721F2A60EF002531A8 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F7A7711F2A60EF002531A8 /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +50,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C9AA7EEB1F2F93D7000965DB /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chartboost.framework; sourceTree = "<group>"; };
+		C9AA7EED1F2F93FC000965DB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		C9AA7EEF1F2F9402000965DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C9AA7EF11F2F940D000965DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C9AA7EF31F2F9414000965DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C9AA7EF61F2F9534000965DB /* Duesquare-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Duesquare-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		C9AA7EF71F2F9535000965DB /* chartboost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = chartboost.m; path = ../chartboost.m; sourceTree = "<group>"; };
+		C9AA7EF91F2FC8C0000965DB /* Ball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
+		C9AA7EFB1F2FC926000965DB /* GameOverPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverPopup.swift; sourceTree = "<group>"; };
+		C9AA7EFD1F2FC9E1000965DB /* Funnel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Funnel.swift; sourceTree = "<group>"; };
+		C9B484CD1F2D44D8003085C2 /* Homescreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Homescreen.swift; path = ../Homescreen.swift; sourceTree = "<group>"; };
+		C9B484CF1F2D45F2003085C2 /* Homescreen.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Homescreen.sks; sourceTree = "<group>"; };
+		C9B484D11F2D9968003085C2 /* StoreScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StoreScene.sks; sourceTree = "<group>"; };
 		C9D5DFC31F16FCAC00F50CC0 /* Duesquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Duesquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D5DFC61F16FCAC00F50CC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9D5DFC81F16FCAC00F50CC0 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -53,6 +79,7 @@
 		C9D5DFE81F16FCAC00F50CC0 /* DuesquareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DuesquareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D5DFEC1F16FCAC00F50CC0 /* DuesquareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuesquareUITests.swift; sourceTree = "<group>"; };
 		C9D5DFEE1F16FCAC00F50CC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9F7A7711F2A60EF002531A8 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +87,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9AA7EF41F2F9414000965DB /* UIKit.framework in Frameworks */,
+				C9AA7EF21F2F940D000965DB /* CoreGraphics.framework in Frameworks */,
+				C9AA7EF01F2F9402000965DB /* Foundation.framework in Frameworks */,
+				C9AA7EEE1F2F93FC000965DB /* StoreKit.framework in Frameworks */,
+				C9F7A7721F2A60EF002531A8 /* GameKit.framework in Frameworks */,
+				C9AA7EEC1F2F93D7000965DB /* Chartboost.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,12 +137,20 @@
 		C9D5DFC51F16FCAC00F50CC0 /* Duesquare */ = {
 			isa = PBXGroup;
 			children = (
+				C9AA7EF71F2F9535000965DB /* chartboost.m */,
+				C9AA7EF61F2F9534000965DB /* Duesquare-Bridging-Header.h */,
+				C9B484CD1F2D44D8003085C2 /* Homescreen.swift */,
 				C9D5DFC61F16FCAC00F50CC0 /* AppDelegate.swift */,
+				C9B484CF1F2D45F2003085C2 /* Homescreen.sks */,
 				C9D5DFC81F16FCAC00F50CC0 /* GameScene.sks */,
 				C9D5DFCA1F16FCAC00F50CC0 /* Actions.sks */,
 				C9D5DFCC1F16FCAC00F50CC0 /* GameScene.swift */,
-				C9D5DFCE1F16FCAC00F50CC0 /* GameViewController.swift */,
+				C9AA7EFD1F2FC9E1000965DB /* Funnel.swift */,
+				C9AA7EF91F2FC8C0000965DB /* Ball.swift */,
+				C9AA7EFB1F2FC926000965DB /* GameOverPopup.swift */,
+				C9B484D11F2D9968003085C2 /* StoreScene.sks */,
 				C9D5DFD01F16FCAC00F50CC0 /* Main.storyboard */,
+				C9D5DFCE1F16FCAC00F50CC0 /* GameViewController.swift */,
 				C9D5DFD31F16FCAC00F50CC0 /* Assets.xcassets */,
 				C9D5DFD51F16FCAC00F50CC0 /* LaunchScreen.storyboard */,
 				C9D5DFD81F16FCAC00F50CC0 /* Info.plist */,
@@ -138,6 +179,12 @@
 		C9DFA46E1F28508A00317E56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C9AA7EF31F2F9414000965DB /* UIKit.framework */,
+				C9AA7EF11F2F940D000965DB /* CoreGraphics.framework */,
+				C9AA7EEF1F2F9402000965DB /* Foundation.framework */,
+				C9AA7EED1F2F93FC000965DB /* StoreKit.framework */,
+				C9AA7EEB1F2F93D7000965DB /* Chartboost.framework */,
+				C9F7A7711F2A60EF002531A8 /* GameKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -211,7 +258,16 @@
 					C9D5DFC21F16FCAC00F50CC0 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = EHPBHF3VYQ;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					C9D5DFDC1F16FCAC00F50CC0 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -254,6 +310,8 @@
 				C9D5DFC91F16FCAC00F50CC0 /* GameScene.sks in Resources */,
 				C9D5DFD41F16FCAC00F50CC0 /* Assets.xcassets in Resources */,
 				C9D5DFD71F16FCAC00F50CC0 /* LaunchScreen.storyboard in Resources */,
+				C9B484D01F2D45F2003085C2 /* Homescreen.sks in Resources */,
+				C9B484D21F2D9968003085C2 /* StoreScene.sks in Resources */,
 				C9D5DFCB1F16FCAC00F50CC0 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,9 +337,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9AA7EFA1F2FC8C0000965DB /* Ball.swift in Sources */,
+				C9AA7EF81F2F9535000965DB /* chartboost.m in Sources */,
+				C9B484CE1F2D44D8003085C2 /* Homescreen.swift in Sources */,
 				C9D5DFCD1F16FCAC00F50CC0 /* GameScene.swift in Sources */,
 				C9D5DFCF1F16FCAC00F50CC0 /* GameViewController.swift in Sources */,
+				C9AA7EFC1F2FC926000965DB /* GameOverPopup.swift in Sources */,
 				C9D5DFC71F16FCAC00F50CC0 /* AppDelegate.swift in Sources */,
+				C9AA7EFE1F2FC9E1000965DB /* Funnel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,17 +496,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = EHPBHF3VYQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MoPubSDK/AdNetworkSupport/GoogleAdMob/SDK",
 					"$(PROJECT_DIR)/MoPubSDK/AdNetworkSupport/Millennial/SDK",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Duesquare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Omdal.Duesquare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Duesquare-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -453,17 +520,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = EHPBHF3VYQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MoPubSDK/AdNetworkSupport/GoogleAdMob/SDK",
 					"$(PROJECT_DIR)/MoPubSDK/AdNetworkSupport/Millennial/SDK",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Duesquare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Omdal.Duesquare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Duesquare-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
