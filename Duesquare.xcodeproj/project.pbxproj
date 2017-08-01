@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C97C7AFF1F30CB0B00802492 /* LevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97C7AFE1F30CB0B00802492 /* LevelScene.swift */; };
 		C9AA7EEC1F2F93D7000965DB /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AA7EEB1F2F93D7000965DB /* Chartboost.framework */; };
 		C9AA7EEE1F2F93FC000965DB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AA7EED1F2F93FC000965DB /* StoreKit.framework */; };
 		C9AA7EF01F2F9402000965DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AA7EEF1F2F9402000965DB /* Foundation.framework */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C97C7AFE1F30CB0B00802492 /* LevelScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelScene.swift; sourceTree = "<group>"; };
 		C9AA7EEB1F2F93D7000965DB /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chartboost.framework; sourceTree = "<group>"; };
 		C9AA7EED1F2F93FC000965DB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C9AA7EEF1F2F9402000965DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -137,6 +139,7 @@
 		C9D5DFC51F16FCAC00F50CC0 /* Duesquare */ = {
 			isa = PBXGroup;
 			children = (
+				C97C7AFE1F30CB0B00802492 /* LevelScene.swift */,
 				C9AA7EF71F2F9535000965DB /* chartboost.m */,
 				C9AA7EF61F2F9534000965DB /* Duesquare-Bridging-Header.h */,
 				C9B484CD1F2D44D8003085C2 /* Homescreen.swift */,
@@ -343,6 +346,7 @@
 				C9D5DFCD1F16FCAC00F50CC0 /* GameScene.swift in Sources */,
 				C9D5DFCF1F16FCAC00F50CC0 /* GameViewController.swift in Sources */,
 				C9AA7EFC1F2FC926000965DB /* GameOverPopup.swift in Sources */,
+				C97C7AFF1F30CB0B00802492 /* LevelScene.swift in Sources */,
 				C9D5DFC71F16FCAC00F50CC0 /* AppDelegate.swift in Sources */,
 				C9AA7EFE1F2FC9E1000965DB /* Funnel.swift in Sources */,
 			);

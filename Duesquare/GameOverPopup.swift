@@ -41,20 +41,24 @@ extension GameScene {
         func touches(pos: CGPoint) {
             if adPlayButton.contains(pos) {
                 // from here the game continues with an ad intervention
+                for child in self.children {
+                    child.removeAllActions()
+                }
                 // Show interstitial at location HomeScreen. See Chartboost.h for available location options.
                 Chartboost.showInterstitial(CBLocationHomeScreen)
                 print("showing ad")
                 self.moveAction(yLocation: Int(-(self.parent?.frame.size.height)! + self.frame.height))
                 if let myParent = self.parent as? GameScene {
-                    myParent.physicsWorld.speed = 1.0
-                    myParent.aimStick.isPaused = false
-                    myParent.prepareNextDrop()
+                    let ready = Ready()
+                    myParent.addChild(ready)
                     myParent.countdownLabel.text = String(Int(myParent.countdownLabel.text!)! + 5)
+
                 }
             }
                 
             else if coinPlayButton.contains(pos) {
                 // from here the game continues with the loss of a coin
+                self.removeAllActions()
                 self.moveAction(yLocation: Int(-(self.parent?.frame.size.height)! + self.frame.height))
                 if let myParent = self.parent as? GameScene {
                     myParent.physicsWorld.speed = 1.0

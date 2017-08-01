@@ -33,6 +33,10 @@ class GameScene: SKScene {
     var fingerDownRight = false
     
     override func didMove(to view: SKView) {
+        
+        let ready = Ready()
+        self.addChild(ready)
+        
         self.physicsWorld.gravity = CGVector(dx: 0.0, dy: -6.0)
         width = self.frame.size.width
         height = self.frame.size.height
@@ -67,8 +71,6 @@ class GameScene: SKScene {
         self.gameover.position = CGPoint(x: 0, y: -height + self.gameover.frame.height)
         self.gameover.isHidden = true
         self.addChild(self.gameover)
-        
-        prepareNextDrop()
     }
     
     func makeScoreBlocks() {
@@ -76,6 +78,18 @@ class GameScene: SKScene {
             let container = ScoreBlock(color: colorArray[i], position: CGPoint(x: width/4.0*CGFloat(i) - width/2.0 + width/8.0, y: -height/2.0))
             self.addChild(container)
             scoreBlocks.append(container)
+        }
+    }
+    
+    class Ready: SKSpriteNode {
+        init() {
+            let texture = SKTexture(image: #imageLiteral(resourceName: "red_ball"))
+            super.init(texture: texture, color: UIColor.clear, size: texture.size())
+            self.name = "ready_sprite"
+        }
+        
+        required init?(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
         }
     }
     
@@ -133,6 +147,14 @@ class GameScene: SKScene {
     }
     
     func touchBegan(atPoint pos : CGPoint) {
+        if let ready = self.childNode(withName: "ready_sprite") {
+            ready.removeFromParent()
+            self.physicsWorld.speed = 1.0
+            self.aimStick.isPaused = false
+            self.prepareNextDrop()
+            self.prepareNextDrop()
+        }
+        
 //        saver3 = pos.x
         if gameover.isHidden == false {
             if gameover.contains(pos) {
@@ -247,7 +269,7 @@ class GameScene: SKScene {
     
     func gameOver() {
         let currentLoss = Int(countdownLabel.text!)
-        if currentLoss == 9 {
+        if currentLoss == 1 {
             countdownLabel.text = String(0)
             self.gameover.moveAction(yLocation: 50)
             self.gameover.createHomeScreenCountdown()
@@ -263,7 +285,7 @@ class GameScene: SKScene {
             countdownLabel.text = String(currentLoss! - 1)
         }
     }
-
+    
     func checkHighscore() {
         var score: Int = 0
         if (UserDefaults.standard.object(forKey: "highscore") != nil) {

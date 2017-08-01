@@ -97,6 +97,7 @@ class Homescreen: SKScene, GKGameCenterControllerDelegate {
             newScene?.scaleMode = .aspectFill
             scene?.view?.presentScene(newScene!, transition: transition)
         }
+            
         else if leaderboard_icon.contains(t) {
             let gcVC = GKGameCenterViewController()
             let vc = self.view?.window?.rootViewController
@@ -106,7 +107,11 @@ class Homescreen: SKScene, GKGameCenterControllerDelegate {
             vc?.present(gcVC, animated: true, completion: nil)
         }
         else if level_icon.contains(t) {
-            
+            let newScene = SKScene(fileNamed: "Levels")
+            newScene?.scaleMode = .aspectFill
+            if let x = scene {
+                x.view?.presentScene(newScene!, transition: transition)
+            }
         }
     }
 }
