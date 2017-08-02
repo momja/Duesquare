@@ -16,7 +16,8 @@ class Funnel: SKNode {
     var textures: [SKTexture]
     
     init(level: Int) {
-        self.textures = self.funnel_1
+        let funnelSet = [funnel_1, funnel_2]
+        self.textures = funnelSet[level - 1]
         super.init()
         stitchTextures()
     }

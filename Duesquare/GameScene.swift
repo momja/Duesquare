@@ -16,7 +16,7 @@ let colorArray = [(UIColor(red: 0, green: 255/255, blue: 0, alpha: 1)), (UIColor
 
 class GameScene: SKScene {
     
-    var aimStick: SKNode = Funnel(x)
+    var aimStick: SKNode = Funnel(level: 1)
     var scoreBlocks = [SKSpriteNode]()
     var scoreLabel = SKLabelNode()
     var countdownLabel = SKLabelNode()
@@ -49,8 +49,9 @@ class GameScene: SKScene {
         if UserDefaults.standard.object(forKey: "isLevelMode") as! Bool == true {
             self.levelMode()
         }
-        
-        aimStick = Funnel()
+        else {
+            aimStick = Funnel(level: 1)
+        }
         self.addChild(aimStick)
         
         self.gameover.position = CGPoint(x: 0, y: -height + self.gameover.frame.height)
@@ -73,18 +74,12 @@ class GameScene: SKScene {
     
     func getFunnel() -> Funnel {
         let level = UserDefaults.standard.object(forKey: "level") as! Int
-        var funnel: Funnel
-        switch level {
-        case 1:
-            funnel = Funnel()
-        case 4:
-            funnel = Funnel()
-        default:
-            funnel = Funnel()
+        func getSet() -> Int {
+            return Int(ceil(CGFloat(level)/3.0))
         }
+        let funnel = Funnel(level: getSet())
         return funnel
     }
-
     
     func makeScoreBlocks() {
         for i in 0...3 {
