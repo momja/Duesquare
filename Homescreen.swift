@@ -9,13 +9,13 @@
 import SpriteKit
 import GameKit
 
-var store_icon = SKSpriteNode()
-var shop_icon = SKSpriteNode()
-var play_icon = SKSpriteNode()
-var leaderboard_icon = SKSpriteNode()
-var level_icon = SKSpriteNode()
-
 class Homescreen: SKScene, GKGameCenterControllerDelegate {
+    
+    var store_icon = SKSpriteNode()
+    var shop_icon = SKSpriteNode()
+    var play_icon = SKSpriteNode()
+    var leaderboard_icon = SKSpriteNode()
+    var level_icon = SKSpriteNode()
     
     /* Variables */
     var gcEnabled = Bool() // Check if the user has Game Center enabled
@@ -30,16 +30,16 @@ class Homescreen: SKScene, GKGameCenterControllerDelegate {
         // Call the GC authentication controller
         authenticateLocalPlayer()
         
-        store_icon = (self.childNode(withName: "store_icon") as? SKSpriteNode)!
-        shop_icon = (self.childNode(withName: "shop_icon") as? SKSpriteNode)!
-        play_icon = (self.childNode(withName: "play_icon") as? SKSpriteNode)!
-        leaderboard_icon = (self.childNode(withName: "leaderboard_icon") as? SKSpriteNode)!
-        level_icon = (self.childNode(withName: "level_icon") as? SKSpriteNode)!
+        self.store_icon = (self.childNode(withName: "store_icon") as? SKSpriteNode)!
+        self.shop_icon = (self.childNode(withName: "shop_icon") as? SKSpriteNode)!
+        self.play_icon = (self.childNode(withName: "play_icon") as? SKSpriteNode)!
+        self.leaderboard_icon = (self.childNode(withName: "leaderboard_icon") as? SKSpriteNode)!
+        self.level_icon = (self.childNode(withName: "level_icon") as? SKSpriteNode)!
         
         let highscore_label = (self.childNode(withName: "highscore_label") as? SKLabelNode)!
         highscore_label.text = "Best: " + String(getHighscore())
     }
-    
+
     func getHighscore() -> Int {
         if UserDefaults.standard.object(forKey: "highscore") != nil {
             return UserDefaults.standard.object(forKey: "highscore") as! Int
@@ -93,6 +93,7 @@ class Homescreen: SKScene, GKGameCenterControllerDelegate {
             
         }
         else if play_icon.contains(t) {
+            UserDefaults.standard.set(false, forKey: "isLevelMode")
             let newScene = SKScene(fileNamed: "GameScene")
             newScene?.scaleMode = .aspectFill
             scene?.view?.presentScene(newScene!, transition: transition)
@@ -107,11 +108,9 @@ class Homescreen: SKScene, GKGameCenterControllerDelegate {
             vc?.present(gcVC, animated: true, completion: nil)
         }
         else if level_icon.contains(t) {
-            let newScene = SKScene(fileNamed: "Levels")
+            let newScene = SKScene(fileNamed: "LevelScene")
             newScene?.scaleMode = .aspectFill
-            if let x = scene {
-                x.view?.presentScene(newScene!, transition: transition)
-            }
+            scene?.view?.presentScene(newScene!, transition: transition)
         }
     }
 }

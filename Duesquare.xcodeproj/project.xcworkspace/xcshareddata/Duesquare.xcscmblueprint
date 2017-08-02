@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "559930F4FCE85EA56A3F639AE4C87907A036C2D2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "559930F4FCE85EA56A3F639AE4C87907A036C2D2" : 9223372036854775807,
+    "C89EDD4DBF1210609F3A458B8547E87C3C4AEA5F" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "EFA6FB7F-6061-469D-9DBC-9482570479C0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "559930F4FCE85EA56A3F639AE4C87907A036C2D2" : "Duesquare\/",
+    "C89EDD4DBF1210609F3A458B8547E87C3C4AEA5F" : "Duesquare\/Duesquare\/SKTUtils\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Duesquare",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Duesquare.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/momja\/Duesquare.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "559930F4FCE85EA56A3F639AE4C87907A036C2D2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/raywenderlich\/SKTUtils.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C89EDD4DBF1210609F3A458B8547E87C3C4AEA5F"
+    }
+  ]
+}

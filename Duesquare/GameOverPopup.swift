@@ -13,6 +13,7 @@ extension GameScene {
         var adPlayButton: SKSpriteNode
         var coinPlayButton: SKSpriteNode
         var background: SKSpriteNode
+        var replay = false
         override init() {
             let backgroundTexture = SKTexture(image: #imageLiteral(resourceName: "game-over-pop-up"))
             background = SKSpriteNode(texture: backgroundTexture)
@@ -52,22 +53,21 @@ extension GameScene {
                     let ready = Ready()
                     myParent.addChild(ready)
                     myParent.countdownLabel.text = String(Int(myParent.countdownLabel.text!)! + 5)
-
+                    replay = true
                 }
             }
                 
             else if coinPlayButton.contains(pos) {
                 // from here the game continues with the loss of a coin
-                self.removeAllActions()
                 self.moveAction(yLocation: Int(-(self.parent?.frame.size.height)! + self.frame.height))
                 if let myParent = self.parent as? GameScene {
-                    myParent.physicsWorld.speed = 1.0
-                    myParent.aimStick.isPaused = false
-                    myParent.prepareNextDrop()
+                    let ready = Ready()
+                    myParent.addChild(ready)
                     myParent.countdownLabel.text = String(Int(myParent.countdownLabel.text!)! + 5)
+                    replay = true
                 }
             }
-                
+            
             else {
                 self.returnToHomescreen()
             }
@@ -94,15 +94,20 @@ extension GameScene {
         }
         
         func moveAction(yLocation: Int) {
-            let moveUp = SKAction.moveTo(y: CGFloat(yLocation), duration: 0.4)
-            moveUp.timingMode = SKActionTimingMode.easeInEaseOut
-            self.run(moveUp)
-            
-            if self.isHidden == true {
-                self.isHidden = false
+            if replay == false {
+                let moveUp = SKAction.moveTo(y: CGFloat(yLocation), duration: 0.4)
+                moveUp.timingMode = SKActionTimingMode.easeInEaseOut
+                self.run(moveUp)
+                
+                if self.isHidden == true {
+                    self.isHidden = false
+                }
+                else {
+                    self.isHidden = true
+                }
             }
             else {
-                self.isHidden = true
+                self.returnToHomescreen()
             }
         }
         

@@ -11,14 +11,12 @@ import GameKit
 
 var width: CGFloat = 0
 var height: CGFloat = 0
+let colorArray = [(UIColor(red: 0, green: 255/255, blue: 0, alpha: 1)), (UIColor(red: 0, green: 0, blue: 255/255, alpha: 1)), (UIColor(red: 255/255, green: 251/255, blue: 0/255, alpha: 1)), (UIColor(red: 255/255, green: 147/255, blue: 0/255, alpha: 1))]
+
 
 class GameScene: SKScene {
     
-
-    let colorArray = [(UIColor(red: 0, green: 255/255, blue: 0, alpha: 1)), (UIColor(red: 0, green: 0, blue: 255/255, alpha: 1)), (UIColor(red: 255/255, green: 251/255, blue: 0/255, alpha: 1)), (UIColor(red: 255/255, green: 147/255, blue: 0/255, alpha: 1))]
-    
-    
-    let aimStick = SKNode()
+    var aimStick: SKNode = Funnel(x)
     var scoreBlocks = [SKSpriteNode]()
     var scoreLabel = SKLabelNode()
     var countdownLabel = SKLabelNode()
@@ -31,6 +29,7 @@ class GameScene: SKScene {
     var xinitial = CGFloat(0)
     var fingerDownLeft = false
     var fingerDownRight = false
+
     
     override func didMove(to view: SKView) {
         
@@ -40,38 +39,52 @@ class GameScene: SKScene {
         self.physicsWorld.gravity = CGVector(dx: 0.0, dy: -6.0)
         width = self.frame.size.width
         height = self.frame.size.height
-        let texture = SKTexture(image: #imageLiteral(resourceName: "funnel"))
-        let left = SKSpriteNode(texture: texture, color: UIColor.red, size: texture.size())
-        left.colorBlendFactor = 1.0
-        left.position.x = -117
-        left.physicsBody = SKPhysicsBody(texture: texture, size: texture.size())
-        left.physicsBody?.usesPreciseCollisionDetection = true
-        left.physicsBody?.affectedByGravity = false
-        left.physicsBody?.pinned = true
-        left.physicsBody?.isDynamic = false
-        left.physicsBody?.restitution = 0.2
-        let textureRight = SKTexture(image: #imageLiteral(resourceName: "funnel-right"))
-        let right = SKSpriteNode(texture: textureRight, color: UIColor.red, size: texture.size())
-        right.colorBlendFactor = 1.0
-        right.position.x = 117
-        right.physicsBody = SKPhysicsBody(texture: textureRight, size: texture.size())
-        right.physicsBody?.usesPreciseCollisionDetection = true
-        right.physicsBody?.affectedByGravity = false
-        right.physicsBody?.pinned = true
-        right.physicsBody?.isDynamic = false
-        right.physicsBody?.restitution = 0.0
-        aimStick.addChild(left)
-        aimStick.addChild(right)
-        self.addChild(aimStick)
+        
+
         makeScoreBlocks()
         scoreLabel = (self.childNode(withName: "score_label") as? SKLabelNode)!
         countdownLabel = (self.childNode(withName: "countdown_label") as? SKLabelNode)!
         colorScoreBlocks()
         
+        if UserDefaults.standard.object(forKey: "isLevelMode") as! Bool == true {
+            self.levelMode()
+        }
+        
+        aimStick = Funnel()
+        self.addChild(aimStick)
+        
         self.gameover.position = CGPoint(x: 0, y: -height + self.gameover.frame.height)
         self.gameover.isHidden = true
         self.addChild(self.gameover)
     }
+    
+    func levelMode() {
+        aimStick = getFunnel()
+        let speedMode = UserDefaults.standard.object(forKey: "speedMode") as! Bool
+        let fewerLivesMode = UserDefaults.standard.object(forKey: "fewerLivesMode") as! Bool
+        if speedMode == true {
+            self.physicsWorld.speed = 1.3
+        }
+        if fewerLivesMode == true {
+            self.countdownLabel.text = String(5)
+        }
+        
+    }
+    
+    func getFunnel() -> Funnel {
+        let level = UserDefaults.standard.object(forKey: "level") as! Int
+        var funnel: Funnel
+        switch level {
+        case 1:
+            funnel = Funnel()
+        case 4:
+            funnel = Funnel()
+        default:
+            funnel = Funnel()
+        }
+        return funnel
+    }
+
     
     func makeScoreBlocks() {
         for i in 0...3 {
@@ -149,7 +162,6 @@ class GameScene: SKScene {
     func touchBegan(atPoint pos : CGPoint) {
         if let ready = self.childNode(withName: "ready_sprite") {
             ready.removeFromParent()
-            self.physicsWorld.speed = 1.0
             self.aimStick.isPaused = false
             self.prepareNextDrop()
             self.prepareNextDrop()
@@ -222,10 +234,18 @@ class GameScene: SKScene {
     func checkBall() {
         
         func checkForScore(ball: Ball, indexOfScoreBlocks: Int) {
+            let scoreParticle = SKEmitterNode(fileNamed: "ScoreParticle")
+            scoreParticle?.position = CGPoint(x: width*CGFloat(indexOfScoreBlocks)/4 - width/2 + width/8, y: -height/2 + scoreBlocks[0].frame.height/2)
+            scoreParticle?.particleColorBlendFactor = 1.0
+            scoreParticle?.particleColorSequence = nil
             if ball.color == scoreBlocks[indexOfScoreBlocks].color {
+                scoreParticle?.particleColor = ball.color
+                self.addChild(scoreParticle!)
                 scored()
             }
             else {
+                scoreParticle?.particleColor = UIColor.red
+                self.addChild(scoreParticle!)
                 gameOver()
             }
         }
@@ -262,20 +282,35 @@ class GameScene: SKScene {
     }
     
     func scored() {
-        let score = Int(scoreLabel.text!)
-        scoreLabel.text = String(score! + 1)
+        
+        var score = Int(scoreLabel.text!)
+        score = score! + 1
+        scoreLabel.text = String(score!)
 //        colorizeScoreBlocks()
+        if UserDefaults.standard.object(forKey: "isLevelMode") as! Bool == true {
+            if score! >= 20 {
+                let currentLevel = UserDefaults.standard.object(forKey: "level") as! Int
+                var bestLevel = UserDefaults.standard.object(forKey: "bestLevel") as! Int
+                if currentLevel == bestLevel {
+                    bestLevel = bestLevel + 1
+                    UserDefaults.standard.set(bestLevel, forKey: "bestLevel")
+                }
+                let newScene = SKScene(fileNamed: "LevelScene")
+                newScene?.scaleMode = .aspectFill
+                scene?.view?.presentScene(newScene)
+            }
+        }
     }
     
     func gameOver() {
         let currentLoss = Int(countdownLabel.text!)
         if currentLoss == 1 {
             countdownLabel.text = String(0)
+            
             self.gameover.moveAction(yLocation: 50)
             self.gameover.createHomeScreenCountdown()
             checkHighscore()
             self.aimStick.isPaused = true
-            self.physicsWorld.speed = 0.0
             self.removeAction(forKey: "drop_sequence")
             for ball in presentBallsArray {
                 ball.removeFromParent()
@@ -340,16 +375,16 @@ extension SKSpriteNode {
         var color = UIColor()
         print(random)
         if (random <= 1) {
-            color = (UIColor(red: 0, green: 255/255, blue: 0, alpha: 1))
+            color = colorArray[0]
         }
         else if (random <= 2){
-            color = (UIColor(red: 0, green: 0, blue: 255/255, alpha: 1))
+            color = colorArray[1]
         }
         else if (random <= 3) {
-            color = (UIColor(red: 255/255, green: 251/255, blue: 0/255, alpha: 1))
+            color = colorArray[2]
         }
         else {
-            color = (UIColor(red: 255/255, green: 147/255, blue: 0/255, alpha: 1))
+           color = colorArray[3]
         }
         return color
     }
