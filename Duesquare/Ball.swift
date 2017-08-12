@@ -15,6 +15,7 @@ extension GameScene {
             let circleTexture = SKTexture(image: #imageLiteral(resourceName: "white_ball_small"))
             super.init(texture: circleTexture, color: UIColor.clear, size: circleTexture.size())
             self.physicsBody = SKPhysicsBody(circleOfRadius: self.frame.size.height/2 + 1)
+            self.physicsBody!.contactTestBitMask = self.physicsBody!.collisionBitMask
             self.physicsBody?.restitution = 0.05
             self.physicsBody?.linearDamping = 0.3
             self.physicsBody?.usesPreciseCollisionDetection = true
@@ -30,5 +31,6 @@ extension GameScene {
         func randomizeDrop() -> CGFloat {
             return CGFloat(arc4random_uniform(16)) - 8
         }
+        
     }
 }

@@ -11,14 +11,23 @@ import SpriteKit
 
 class Ready: SKNode {
     override init() {
-        super.init()
+        super.init() 
         self.name = "ready_sprite"
+        let readyText = SKLabelNode(text: "ready...")
+        readyText.fontSize = 96
+        readyText.fontName = "Hiragino Kaku Gothic StdN"
+        readyText.zPosition = 15
+        self.addChild(readyText)
+        
+        let scoreDescription = SKSpriteNode(imageNamed: "score-description")
+        scoreDescription.position = CGPoint(x: -47, y: 490)
+        scoreDescription.zPosition = 15
+        self.addChild(scoreDescription)
         animateTaps()
     }
     
     func animateTaps() {
-        
-        
+
         let tappedSide = SKShapeNode(rectOf: CGSize(width: width/2, height: height))
         tappedSide.fillColor = UIColor.black
         tappedSide.lineWidth = 0
@@ -29,6 +38,7 @@ class Ready: SKNode {
         
         let tapTexture = SKTexture(image: #imageLiteral(resourceName: "tap-icon"))
         let tap = SKSpriteNode(texture: tapTexture)
+        tap.position.y = -100
         self.addChild(tap)
 
         

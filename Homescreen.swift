@@ -16,7 +16,7 @@ class Homescreen: SKScene, GKGameCenterControllerDelegate {
     var play_icon = Button()
     var leaderboard_icon = Button()
     var level_icon = Button()
-    var mode_icon = SKLabelNode()
+    var mode_icon = Button()
     
     /* Variables */
     var gcEnabled = Bool() // Check if the user has Game Center enabled
@@ -37,19 +37,28 @@ class Homescreen: SKScene, GKGameCenterControllerDelegate {
 //        self.shop_icon = (self.childNode(withName: "shop_icon") as? SKSpriteNode)!
         let playImage = SKSpriteNode(imageNamed: "play-icon-gradient")
         self.play_icon.addChild(playImage)
-        play_icon.position = CGPoint(x: 0, y: -327)
+        play_icon.position = CGPoint(x: 0, y: -227)
         self.addChild(play_icon)
         let leaderBoardImage = SKSpriteNode(imageNamed: "leaderboard-icon-gradient")
         self.leaderboard_icon.addChild(leaderBoardImage)
         self.addChild(leaderboard_icon)
-        leaderboard_icon.position = CGPoint(x: -248.5, y: -375)
+        leaderboard_icon.position = CGPoint(x: -248.5, y: -275)
         let levelImage = SKSpriteNode(imageNamed: "level-icon-gradient")
         self.level_icon.addChild(levelImage)
         self.addChild(level_icon)
-        level_icon.position = CGPoint(x: 248.5, y: -375)
-        self.mode_icon = (self.childNode(withName: "mode_icon") as? SKLabelNode)!
-        
-        self.mode_icon.text = "mode: " + getMode()
+        level_icon.position = CGPoint(x: 248.5, y: -275)
+        let modeLabel = SKLabelNode(fontNamed: "Hiragino Kaku Gothic StdN")
+        modeLabel.name = "modeLabel"
+        modeLabel.text = "mode: " + getMode()
+        modeLabel.fontSize = 36
+        modeLabel.position.y = -modeLabel.fontSize/2 + 5
+        modeLabel.zPosition = 1
+        let modeButton = SKSpriteNode(imageNamed: "mode-button")
+        modeButton.zPosition = 0
+        self.mode_icon.position.y = -490
+        self.mode_icon.addChild(modeButton)
+        self.mode_icon.addChild(modeLabel)
+        self.addChild(mode_icon)
         
         let highscore_label = (self.childNode(withName: "highscore_label") as? SKLabelNode)!
         highscore_label.text = "Best: " + String(getHighscore())
@@ -130,6 +139,9 @@ class Homescreen: SKScene, GKGameCenterControllerDelegate {
         else if level_icon.contains(t) {
             level_icon.animateAcceptedTouch()
         }
+        else if mode_icon.contains(t) {
+            mode_icon.animateAcceptedTouch()
+        }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -162,7 +174,7 @@ class Homescreen: SKScene, GKGameCenterControllerDelegate {
             scene?.view?.presentScene(newScene!, transition: transition)
         }
         else if mode_icon.contains(t) {
-            mode_icon.text = "mode: " + toggleMode()
+            (mode_icon.childNode(withName: "modeLabel") as! SKLabelNode).text = "mode: " + toggleMode()
         }
     }
 }

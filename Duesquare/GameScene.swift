@@ -14,7 +14,7 @@ var height: CGFloat = 0
 let colorBlocksArray = [UIColor(red:1.00, green:0.84, blue:0.13, alpha:1.0), UIColor(red:0.03, green:0.53, blue:0.91, alpha:1.0), (UIColor.white), UIColor(red:1.00, green:0.35, blue:0.08, alpha:1.0), UIColor(red:0.14, green:0.91, blue:0.34, alpha:1.0)]
 let colorBallsArray = [UIColor(red:1.00, green:0.84, blue:0.13, alpha:1.0), UIColor(red:0.03, green:0.53, blue:0.91, alpha:1.0), UIColor(red:1.00, green:0.35, blue:0.08, alpha:1.0), UIColor(red:0.14, green:0.91, blue:0.34, alpha:1.0)]
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var aimStick: SKNode = Funnel(level: 1)
     var scoreBlocks = [SKSpriteNode]()
@@ -22,7 +22,7 @@ class GameScene: SKScene {
     var countdownLabel = SKLabelNode()
     let gameover = GameOverScreen()
     
-    
+    let COLLISION_SOUND = SKAction.playSoundFileNamed("sound-effect.wav", waitForCompletion: true)
     var score = 0
     var saver1 = CGFloat(integerLiteral: 0)
     var saver3 = CGFloat(integerLiteral: 0)
@@ -32,16 +32,13 @@ class GameScene: SKScene {
     var fingerDownLeft = false
     var fingerDownRight = false
     let rotateMode = UserDefaults.standard.object(forKey: "rotateMode") as! String
-
     
     override func didMove(to view: SKView) {
 
         self.physicsWorld.gravity = CGVector(dx: 0.0, dy: -5.0)
+        self.physicsWorld.contactDelegate = self
         width = self.frame.size.width
         height = self.frame.size.height
-        
-        let ready = Ready()
-        self.addChild(ready)
         
         makeScoreBlocks()
         scoreLabel = (self.childNode(withName: "score_label") as? SKLabelNode)!
@@ -54,8 +51,11 @@ class GameScene: SKScene {
         else {
             aimStick = Funnel(level: 1)
         }
-        aimStick.zRotation = -1/10*CGFloat.pi
+        aimStick.zRotation = 1/10*CGFloat.pi
         self.addChild(aimStick)
+        
+        let ready = Ready()
+        self.addChild(ready)
         
         self.gameover.position = CGPoint(x: 0, y: -height + self.gameover.frame.height)
         self.gameover.isHidden = true
@@ -324,6 +324,15 @@ class GameScene: SKScene {
         else if currentLoss! > 1 {
             countdownLabel.text = String(currentLoss! - 1)
         }
+    }
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        print("playing sound")
+        playSound()
+    }
+    
+    func playSound() {
+        aimStick.run(COLLISION_SOUND)
     }
     
     override func update(_ currentTime: TimeInterval) {

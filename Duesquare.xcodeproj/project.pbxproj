@@ -52,6 +52,10 @@
 		C9D5DFD71F16FCAC00F50CC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D5DFD51F16FCAC00F50CC0 /* LaunchScreen.storyboard */; };
 		C9D5DFE21F16FCAC00F50CC0 /* DuesquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D5DFE11F16FCAC00F50CC0 /* DuesquareTests.swift */; };
 		C9D5DFED1F16FCAC00F50CC0 /* DuesquareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D5DFEC1F16FCAC00F50CC0 /* DuesquareUITests.swift */; };
+		C9E2294A1F3F7E66001BC9D5 /* LyceumPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E229491F3F7E66001BC9D5 /* LyceumPage.swift */; };
+		C9E2294C1F3F7F46001BC9D5 /* LyceumPage.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9E2294B1F3F7F46001BC9D5 /* LyceumPage.sks */; };
+		C9E229521F3F8FED001BC9D5 /* sound-effect.caf in Resources */ = {isa = PBXBuildFile; fileRef = C9E229511F3F8FDF001BC9D5 /* sound-effect.caf */; };
+		C9E229541F3F92CD001BC9D5 /* sound-effect.wav in Resources */ = {isa = PBXBuildFile; fileRef = C9E229531F3F92CB001BC9D5 /* sound-effect.wav */; };
 		C9F7A7721F2A60EF002531A8 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F7A7711F2A60EF002531A8 /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,8 +78,6 @@
 
 /* Begin PBXFileReference section */
 		1C0C613B1DF0FF98BC213F73 /* libPods-Duesquare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Duesquare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C4F09D510319A4B8547CB4A /* Pods-Duesquare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Duesquare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Duesquare/Pods-Duesquare.debug.xcconfig"; sourceTree = "<group>"; };
-		BCDAD2A38EE3578C37693392 /* Pods-Duesquare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Duesquare.release.xcconfig"; path = "Pods/Target Support Files/Pods-Duesquare/Pods-Duesquare.release.xcconfig"; sourceTree = "<group>"; };
 		C94DCEA41F30EA0A00524531 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		C94DCEA51F30EA0A00524531 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
 		C94DCEA61F30EA0A00524531 /* CGVector+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGVector+Extensions.swift"; sourceTree = "<group>"; };
@@ -102,16 +104,12 @@
 		C9AA7EFD1F2FC9E1000965DB /* Funnel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Funnel.swift; sourceTree = "<group>"; };
 		C9AD90B31F3791AC000496C4 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		C9AD90B51F3791B3000496C4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		C9AD90B71F3791BA000496C4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C9AD90B91F3791C1000496C4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		C9AD90BB1F3791D1000496C4 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		C9AD90BD1F3791E2000496C4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		C9AD90BF1F3791EC000496C4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		C9AD90C11F3791F9000496C4 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		C9AD90C31F3791FF000496C4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C9AD90C51F37920E000496C4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		C9AD90C71F37921D000496C4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		C9AD90C91F379248000496C4 /* VungleSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VungleSDK.framework; sourceTree = "<group>"; };
 		C9B484CD1F2D44D8003085C2 /* Homescreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Homescreen.swift; path = ../Homescreen.swift; sourceTree = "<group>"; };
 		C9B484CF1F2D45F2003085C2 /* Homescreen.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Homescreen.sks; sourceTree = "<group>"; };
 		C9BE80CA1F322D9A0082C3CD /* ScoreParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ScoreParticle.sks; sourceTree = "<group>"; };
@@ -134,6 +132,10 @@
 		C9D5DFE81F16FCAC00F50CC0 /* DuesquareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DuesquareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D5DFEC1F16FCAC00F50CC0 /* DuesquareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuesquareUITests.swift; sourceTree = "<group>"; };
 		C9D5DFEE1F16FCAC00F50CC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9E229491F3F7E66001BC9D5 /* LyceumPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyceumPage.swift; sourceTree = "<group>"; };
+		C9E2294B1F3F7F46001BC9D5 /* LyceumPage.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LyceumPage.sks; sourceTree = "<group>"; };
+		C9E229511F3F8FDF001BC9D5 /* sound-effect.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sound-effect.caf"; sourceTree = "<group>"; };
+		C9E229531F3F92CB001BC9D5 /* sound-effect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sound-effect.wav"; sourceTree = "<group>"; };
 		C9F7A7711F2A60EF002531A8 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -174,15 +176,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B95CF21649FB57105705E236 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8C4F09D510319A4B8547CB4A /* Pods-Duesquare.debug.xcconfig */,
-				BCDAD2A38EE3578C37693392 /* Pods-Duesquare.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		C94DCEA31F30EA0A00524531 /* SKTUtils */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,7 +205,6 @@
 				C9D5DFEB1F16FCAC00F50CC0 /* DuesquareUITests */,
 				C9D5DFC41F16FCAC00F50CC0 /* Products */,
 				C9DFA46E1F28508A00317E56 /* Frameworks */,
-				B95CF21649FB57105705E236 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -229,10 +221,14 @@
 		C9D5DFC51F16FCAC00F50CC0 /* Duesquare */ = {
 			isa = PBXGroup;
 			children = (
+				C9E229511F3F8FDF001BC9D5 /* sound-effect.caf */,
+				C9E229531F3F92CB001BC9D5 /* sound-effect.wav */,
 				C9C1EC531F3BF02800E9E837 /* Hiragino.ttc */,
 				C9AA7EF71F2F9535000965DB /* chartboost.m */,
 				C9AA7EF61F2F9534000965DB /* Duesquare-Bridging-Header.h */,
 				C9D5DFCE1F16FCAC00F50CC0 /* GameViewController.swift */,
+				C9E229491F3F7E66001BC9D5 /* LyceumPage.swift */,
+				C9E2294B1F3F7F46001BC9D5 /* LyceumPage.sks */,
 				C97C7AFE1F30CB0B00802492 /* LevelScene.swift */,
 				C97C7B001F30CBBA00802492 /* LevelScene.sks */,
 				C9B484CD1F2D44D8003085C2 /* Homescreen.swift */,
@@ -275,16 +271,12 @@
 		C9DFA46E1F28508A00317E56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C9AD90C91F379248000496C4 /* VungleSDK.framework */,
-				C9AD90C71F37921D000496C4 /* WebKit.framework */,
 				C9AD90C51F37920E000496C4 /* SystemConfiguration.framework */,
 				C9AD90C31F3791FF000496C4 /* QuartzCore.framework */,
-				C9AD90C11F3791F9000496C4 /* MediaPlayer.framework */,
 				C9AD90BF1F3791EC000496C4 /* libsqlite3.tbd */,
 				C9AD90BD1F3791E2000496C4 /* libz.tbd */,
 				C9AD90BB1F3791D1000496C4 /* CoreMedia.framework */,
 				C9AD90B91F3791C1000496C4 /* CFNetwork.framework */,
-				C9AD90B71F3791BA000496C4 /* AVFoundation.framework */,
 				C9AD90B51F3791B3000496C4 /* AudioToolbox.framework */,
 				C9AD90B31F3791AC000496C4 /* AdSupport.framework */,
 				C9AA7EF31F2F9414000965DB /* UIKit.framework */,
@@ -422,9 +414,12 @@
 			files = (
 				C9BE80CC1F322D9A0082C3CD /* ScoreParticle.sks in Resources */,
 				C9D5DFD21F16FCAC00F50CC0 /* Main.storyboard in Resources */,
+				C9E229521F3F8FED001BC9D5 /* sound-effect.caf in Resources */,
 				C9D5DFC91F16FCAC00F50CC0 /* GameScene.sks in Resources */,
+				C9E2294C1F3F7F46001BC9D5 /* LyceumPage.sks in Resources */,
 				C9D5DFD41F16FCAC00F50CC0 /* Assets.xcassets in Resources */,
 				C97C7B011F30CBBA00802492 /* LevelScene.sks in Resources */,
+				C9E229541F3F92CD001BC9D5 /* sound-effect.wav in Resources */,
 				C9D5DFD71F16FCAC00F50CC0 /* LaunchScreen.storyboard in Resources */,
 				C9C1EC551F3BF91B00E9E837 /* Hiragino.ttc in Resources */,
 				C9B484D01F2D45F2003085C2 /* Homescreen.sks in Resources */,
@@ -508,6 +503,7 @@
 				C94DCEB91F30EA0A00524531 /* SKTEffects.swift in Sources */,
 				C94DCEB81F30EA0A00524531 /* SKTAudio.swift in Sources */,
 				C9D5DFCD1F16FCAC00F50CC0 /* GameScene.swift in Sources */,
+				C9E2294A1F3F7E66001BC9D5 /* LyceumPage.swift in Sources */,
 				C94DCEBA1F30EA0A00524531 /* SKTTimingFunctions.swift in Sources */,
 				C9D5DFCF1F16FCAC00F50CC0 /* GameViewController.swift in Sources */,
 				C94DCEB31F30EA0A00524531 /* Int+Extensions.swift in Sources */,
@@ -689,9 +685,9 @@
 		};
 		C9D5DFF21F16FCAC00F50CC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C4F09D510319A4B8547CB4A /* Pods-Duesquare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = EHPBHF3VYQ;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -715,9 +711,9 @@
 		};
 		C9D5DFF31F16FCAC00F50CC0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCDAD2A38EE3578C37693392 /* Pods-Duesquare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = EHPBHF3VYQ;
 				FRAMEWORK_SEARCH_PATHS = (
