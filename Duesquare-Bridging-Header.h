@@ -7,3 +7,4 @@
 #import <Chartboost/Chartboost.h>
 #import <CommonCrypto/CommonDigest.h>
 #import <AdSupport/AdSupport.h>
+#import <VungleSDK/VungleSDK.h>

@@ -11,11 +11,12 @@ import GameKit
 
 class Homescreen: SKScene, GKGameCenterControllerDelegate {
     
-    var store_icon = SKSpriteNode()
-    var shop_icon = SKSpriteNode()
-    var play_icon = SKSpriteNode()
-    var leaderboard_icon = SKSpriteNode()
-    var level_icon = SKSpriteNode()
+//    var store_icon = SKSpriteNode()
+//    var shop_icon = SKSpriteNode()
+    var play_icon = Button()
+    var leaderboard_icon = Button()
+    var level_icon = Button()
+    var mode_icon = SKLabelNode()
     
     /* Variables */
     var gcEnabled = Bool() // Check if the user has Game Center enabled
@@ -23,18 +24,32 @@ class Homescreen: SKScene, GKGameCenterControllerDelegate {
     
     var score = 0
     
-    // IMPORTANT: replace the red string below with your own Leaderboard ID (the one you've set in iTunes Connect)
     let LEADERBOARD_ID = "quadsquare_highscore_leaderboard"
     
     override func didMove(to view: SKView) {
+        
+        Chartboost.cacheInterstitial(CBLocationHomeScreen)
+
         // Call the GC authentication controller
         authenticateLocalPlayer()
         
-        self.store_icon = (self.childNode(withName: "store_icon") as? SKSpriteNode)!
-        self.shop_icon = (self.childNode(withName: "shop_icon") as? SKSpriteNode)!
-        self.play_icon = (self.childNode(withName: "play_icon") as? SKSpriteNode)!
-        self.leaderboard_icon = (self.childNode(withName: "leaderboard_icon") as? SKSpriteNode)!
-        self.level_icon = (self.childNode(withName: "level_icon") as? SKSpriteNode)!
+//        self.store_icon = (self.childNode(withName: "store_icon") as? SKSpriteNode)!
+//        self.shop_icon = (self.childNode(withName: "shop_icon") as? SKSpriteNode)!
+        let playImage = SKSpriteNode(imageNamed: "play-icon-gradient")
+        self.play_icon.addChild(playImage)
+        play_icon.position = CGPoint(x: 0, y: -327)
+        self.addChild(play_icon)
+        let leaderBoardImage = SKSpriteNode(imageNamed: "leaderboard-icon-gradient")
+        self.leaderboard_icon.addChild(leaderBoardImage)
+        self.addChild(leaderboard_icon)
+        leaderboard_icon.position = CGPoint(x: -248.5, y: -375)
+        let levelImage = SKSpriteNode(imageNamed: "level-icon-gradient")
+        self.level_icon.addChild(levelImage)
+        self.addChild(level_icon)
+        level_icon.position = CGPoint(x: 248.5, y: -375)
+        self.mode_icon = (self.childNode(withName: "mode_icon") as? SKLabelNode)!
+        
+        self.mode_icon.text = "mode: " + getMode()
         
         let highscore_label = (self.childNode(withName: "highscore_label") as? SKLabelNode)!
         highscore_label.text = "Best: " + String(getHighscore())
@@ -46,6 +61,27 @@ class Homescreen: SKScene, GKGameCenterControllerDelegate {
         }
         else {
             return 0
+        }
+    }
+    
+    func getMode() -> String {
+        if let rotateMode = UserDefaults.standard.object(forKey: "rotateMode") as? String {
+            return rotateMode
+        }
+        else {
+            UserDefaults.standard.set("normal", forKey: "rotateMode")
+            return "normal"
+        }
+    }
+    
+    func toggleMode() -> String {
+        if getMode() == "normal" {
+            UserDefaults.standard.set("inverted", forKey: "rotateMode")
+            return "inverted"
+        }
+        else {
+            UserDefaults.standard.set("normal", forKey: "rotateMode")
+            return "normal"
         }
     }
     
@@ -85,14 +121,27 @@ class Homescreen: SKScene, GKGameCenterControllerDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let t = touches.first!.location(in: self)
+        if play_icon.contains(t) {
+            play_icon.animateAcceptedTouch()
+        }
+        else if leaderboard_icon.contains(t) {
+            leaderboard_icon.animateAcceptedTouch()
+        }
+        else if level_icon.contains(t) {
+            level_icon.animateAcceptedTouch()
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let t = touches.first!.location(in: self)
         let transition = SKTransition.fade(withDuration: 0.3)
-        if store_icon.contains(t) {
-            
-        }
-        else if shop_icon.contains(t) {
-            
-        }
-        else if play_icon.contains(t) {
+        //        if store_icon.contains(t) {
+        //
+        //        }
+        //        else if shop_icon.contains(t) {
+        //
+        //        }
+        if play_icon.contains(t) {
             UserDefaults.standard.set(false, forKey: "isLevelMode")
             let newScene = SKScene(fileNamed: "GameScene")
             newScene?.scaleMode = .aspectFill
@@ -111,6 +160,9 @@ class Homescreen: SKScene, GKGameCenterControllerDelegate {
             let newScene = SKScene(fileNamed: "LevelScene")
             newScene?.scaleMode = .aspectFill
             scene?.view?.presentScene(newScene!, transition: transition)
+        }
+        else if mode_icon.contains(t) {
+            mode_icon.text = "mode: " + toggleMode()
         }
     }
 }

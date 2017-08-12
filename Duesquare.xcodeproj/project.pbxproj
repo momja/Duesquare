@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87EC82B14C07CD833532D3CD /* libPods-Duesquare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C0C613B1DF0FF98BC213F73 /* libPods-Duesquare.a */; };
 		C94DCEB01F30EA0A00524531 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94DCEA41F30EA0A00524531 /* CGFloat+Extensions.swift */; };
 		C94DCEB11F30EA0A00524531 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94DCEA51F30EA0A00524531 /* CGPoint+Extensions.swift */; };
 		C94DCEB21F30EA0A00524531 /* CGVector+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94DCEA61F30EA0A00524531 /* CGVector+Extensions.swift */; };
@@ -30,10 +31,17 @@
 		C9AA7EFA1F2FC8C0000965DB /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA7EF91F2FC8C0000965DB /* Ball.swift */; };
 		C9AA7EFC1F2FC926000965DB /* GameOverPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA7EFB1F2FC926000965DB /* GameOverPopup.swift */; };
 		C9AA7EFE1F2FC9E1000965DB /* Funnel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA7EFD1F2FC9E1000965DB /* Funnel.swift */; };
+		C9AD90B41F3791AC000496C4 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AD90B31F3791AC000496C4 /* AdSupport.framework */; };
+		C9AD90BA1F3791C1000496C4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AD90B91F3791C1000496C4 /* CFNetwork.framework */; };
+		C9AD90BC1F3791D2000496C4 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AD90BB1F3791D1000496C4 /* CoreMedia.framework */; };
+		C9AD90BE1F3791E2000496C4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AD90BD1F3791E2000496C4 /* libz.tbd */; };
+		C9AD90C01F3791ED000496C4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AD90BF1F3791EC000496C4 /* libsqlite3.tbd */; };
 		C9B484CE1F2D44D8003085C2 /* Homescreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B484CD1F2D44D8003085C2 /* Homescreen.swift */; };
 		C9B484D01F2D45F2003085C2 /* Homescreen.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9B484CF1F2D45F2003085C2 /* Homescreen.sks */; };
 		C9BE80CC1F322D9A0082C3CD /* ScoreParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9BE80CA1F322D9A0082C3CD /* ScoreParticle.sks */; };
-		C9BE80CD1F322D9A0082C3CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9BE80CB1F322D9A0082C3CD /* Assets.xcassets */; };
+		C9C1EC551F3BF91B00E9E837 /* Hiragino.ttc in Resources */ = {isa = PBXBuildFile; fileRef = C9C1EC531F3BF02800E9E837 /* Hiragino.ttc */; };
+		C9C1EC571F3CD6E800E9E837 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C1EC561F3CD6E800E9E837 /* Button.swift */; };
+		C9C1EC591F3D539D00E9E837 /* Ready.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C1EC581F3D539D00E9E837 /* Ready.swift */; };
 		C9D5DFC71F16FCAC00F50CC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D5DFC61F16FCAC00F50CC0 /* AppDelegate.swift */; };
 		C9D5DFC91F16FCAC00F50CC0 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9D5DFC81F16FCAC00F50CC0 /* GameScene.sks */; };
 		C9D5DFCB1F16FCAC00F50CC0 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9D5DFCA1F16FCAC00F50CC0 /* Actions.sks */; };
@@ -65,6 +73,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C0C613B1DF0FF98BC213F73 /* libPods-Duesquare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Duesquare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C4F09D510319A4B8547CB4A /* Pods-Duesquare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Duesquare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Duesquare/Pods-Duesquare.debug.xcconfig"; sourceTree = "<group>"; };
+		BCDAD2A38EE3578C37693392 /* Pods-Duesquare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Duesquare.release.xcconfig"; path = "Pods/Target Support Files/Pods-Duesquare/Pods-Duesquare.release.xcconfig"; sourceTree = "<group>"; };
 		C94DCEA41F30EA0A00524531 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		C94DCEA51F30EA0A00524531 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
 		C94DCEA61F30EA0A00524531 /* CGVector+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGVector+Extensions.swift"; sourceTree = "<group>"; };
@@ -89,10 +100,24 @@
 		C9AA7EF91F2FC8C0000965DB /* Ball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
 		C9AA7EFB1F2FC926000965DB /* GameOverPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverPopup.swift; sourceTree = "<group>"; };
 		C9AA7EFD1F2FC9E1000965DB /* Funnel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Funnel.swift; sourceTree = "<group>"; };
+		C9AD90B31F3791AC000496C4 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		C9AD90B51F3791B3000496C4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C9AD90B71F3791BA000496C4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C9AD90B91F3791C1000496C4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C9AD90BB1F3791D1000496C4 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		C9AD90BD1F3791E2000496C4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		C9AD90BF1F3791EC000496C4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		C9AD90C11F3791F9000496C4 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		C9AD90C31F3791FF000496C4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C9AD90C51F37920E000496C4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C9AD90C71F37921D000496C4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		C9AD90C91F379248000496C4 /* VungleSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VungleSDK.framework; sourceTree = "<group>"; };
 		C9B484CD1F2D44D8003085C2 /* Homescreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Homescreen.swift; path = ../Homescreen.swift; sourceTree = "<group>"; };
 		C9B484CF1F2D45F2003085C2 /* Homescreen.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Homescreen.sks; sourceTree = "<group>"; };
 		C9BE80CA1F322D9A0082C3CD /* ScoreParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ScoreParticle.sks; sourceTree = "<group>"; };
-		C9BE80CB1F322D9A0082C3CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9C1EC531F3BF02800E9E837 /* Hiragino.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; name = Hiragino.ttc; path = "Hiragino Kaku/Hiragino Kaku Gothic StdN/Hiragino.ttc"; sourceTree = "<group>"; };
+		C9C1EC561F3CD6E800E9E837 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		C9C1EC581F3D539D00E9E837 /* Ready.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ready.swift; sourceTree = "<group>"; };
 		C9D5DFC31F16FCAC00F50CC0 /* Duesquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Duesquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D5DFC61F16FCAC00F50CC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9D5DFC81F16FCAC00F50CC0 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -118,11 +143,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9AA7EF41F2F9414000965DB /* UIKit.framework in Frameworks */,
+				C9AD90C01F3791ED000496C4 /* libsqlite3.tbd in Frameworks */,
+				C9AD90BE1F3791E2000496C4 /* libz.tbd in Frameworks */,
+				C9AD90BC1F3791D2000496C4 /* CoreMedia.framework in Frameworks */,
 				C9AA7EF21F2F940D000965DB /* CoreGraphics.framework in Frameworks */,
+				C9AD90BA1F3791C1000496C4 /* CFNetwork.framework in Frameworks */,
+				C9AD90B41F3791AC000496C4 /* AdSupport.framework in Frameworks */,
 				C9AA7EF01F2F9402000965DB /* Foundation.framework in Frameworks */,
 				C9AA7EEE1F2F93FC000965DB /* StoreKit.framework in Frameworks */,
 				C9F7A7721F2A60EF002531A8 /* GameKit.framework in Frameworks */,
 				C9AA7EEC1F2F93D7000965DB /* Chartboost.framework in Frameworks */,
+				87EC82B14C07CD833532D3CD /* libPods-Duesquare.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +174,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B95CF21649FB57105705E236 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8C4F09D510319A4B8547CB4A /* Pods-Duesquare.debug.xcconfig */,
+				BCDAD2A38EE3578C37693392 /* Pods-Duesquare.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C94DCEA31F30EA0A00524531 /* SKTUtils */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,13 +206,13 @@
 			isa = PBXGroup;
 			children = (
 				C9BE80CA1F322D9A0082C3CD /* ScoreParticle.sks */,
-				C9BE80CB1F322D9A0082C3CD /* Assets.xcassets */,
 				C94DCEA31F30EA0A00524531 /* SKTUtils */,
 				C9D5DFC51F16FCAC00F50CC0 /* Duesquare */,
 				C9D5DFE01F16FCAC00F50CC0 /* DuesquareTests */,
 				C9D5DFEB1F16FCAC00F50CC0 /* DuesquareUITests */,
 				C9D5DFC41F16FCAC00F50CC0 /* Products */,
 				C9DFA46E1F28508A00317E56 /* Frameworks */,
+				B95CF21649FB57105705E236 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,6 +229,7 @@
 		C9D5DFC51F16FCAC00F50CC0 /* Duesquare */ = {
 			isa = PBXGroup;
 			children = (
+				C9C1EC531F3BF02800E9E837 /* Hiragino.ttc */,
 				C9AA7EF71F2F9535000965DB /* chartboost.m */,
 				C9AA7EF61F2F9534000965DB /* Duesquare-Bridging-Header.h */,
 				C9D5DFCE1F16FCAC00F50CC0 /* GameViewController.swift */,
@@ -201,7 +242,9 @@
 				C9D5DFC81F16FCAC00F50CC0 /* GameScene.sks */,
 				C9AA7EFD1F2FC9E1000965DB /* Funnel.swift */,
 				C9AA7EF91F2FC8C0000965DB /* Ball.swift */,
+				C9C1EC581F3D539D00E9E837 /* Ready.swift */,
 				C9AA7EFB1F2FC926000965DB /* GameOverPopup.swift */,
+				C9C1EC561F3CD6E800E9E837 /* Button.swift */,
 				C9D5DFCA1F16FCAC00F50CC0 /* Actions.sks */,
 				C9D5DFD01F16FCAC00F50CC0 /* Main.storyboard */,
 				C9D5DFD31F16FCAC00F50CC0 /* Assets.xcassets */,
@@ -232,12 +275,25 @@
 		C9DFA46E1F28508A00317E56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C9AD90C91F379248000496C4 /* VungleSDK.framework */,
+				C9AD90C71F37921D000496C4 /* WebKit.framework */,
+				C9AD90C51F37920E000496C4 /* SystemConfiguration.framework */,
+				C9AD90C31F3791FF000496C4 /* QuartzCore.framework */,
+				C9AD90C11F3791F9000496C4 /* MediaPlayer.framework */,
+				C9AD90BF1F3791EC000496C4 /* libsqlite3.tbd */,
+				C9AD90BD1F3791E2000496C4 /* libz.tbd */,
+				C9AD90BB1F3791D1000496C4 /* CoreMedia.framework */,
+				C9AD90B91F3791C1000496C4 /* CFNetwork.framework */,
+				C9AD90B71F3791BA000496C4 /* AVFoundation.framework */,
+				C9AD90B51F3791B3000496C4 /* AudioToolbox.framework */,
+				C9AD90B31F3791AC000496C4 /* AdSupport.framework */,
 				C9AA7EF31F2F9414000965DB /* UIKit.framework */,
 				C9AA7EF11F2F940D000965DB /* CoreGraphics.framework */,
 				C9AA7EEF1F2F9402000965DB /* Foundation.framework */,
 				C9AA7EED1F2F93FC000965DB /* StoreKit.framework */,
 				C9AA7EEB1F2F93D7000965DB /* Chartboost.framework */,
 				C9F7A7711F2A60EF002531A8 /* GameKit.framework */,
+				1C0C613B1DF0FF98BC213F73 /* libPods-Duesquare.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -249,9 +305,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9D5DFF11F16FCAC00F50CC0 /* Build configuration list for PBXNativeTarget "Duesquare" */;
 			buildPhases = (
+				25494A4442F73BEB544E22E4 /* [CP] Check Pods Manifest.lock */,
 				C9D5DFBF1F16FCAC00F50CC0 /* Sources */,
 				C9D5DFC01F16FCAC00F50CC0 /* Frameworks */,
 				C9D5DFC11F16FCAC00F50CC0 /* Resources */,
+				57AD532C8D8B8D7FDC91EA18 /* [CP] Embed Pods Frameworks */,
+				7E49C11F2F333C661D525F56 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -305,13 +364,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Maxwell James Omdal";
 				TargetAttributes = {
 					C9D5DFC21F16FCAC00F50CC0 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = EHPBHF3VYQ;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
@@ -324,11 +383,13 @@
 					};
 					C9D5DFDC1F16FCAC00F50CC0 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = C9D5DFC21F16FCAC00F50CC0;
 					};
 					C9D5DFE71F16FCAC00F50CC0 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = C9D5DFC21F16FCAC00F50CC0;
 					};
@@ -365,8 +426,8 @@
 				C9D5DFD41F16FCAC00F50CC0 /* Assets.xcassets in Resources */,
 				C97C7B011F30CBBA00802492 /* LevelScene.sks in Resources */,
 				C9D5DFD71F16FCAC00F50CC0 /* LaunchScreen.storyboard in Resources */,
+				C9C1EC551F3BF91B00E9E837 /* Hiragino.ttc in Resources */,
 				C9B484D01F2D45F2003085C2 /* Homescreen.sks in Resources */,
-				C9BE80CD1F322D9A0082C3CD /* Assets.xcassets in Resources */,
 				C9D5DFCB1F16FCAC00F50CC0 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,11 +448,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		25494A4442F73BEB544E22E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		57AD532C8D8B8D7FDC91EA18 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Duesquare/Pods-Duesquare-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E49C11F2F333C661D525F56 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Duesquare/Pods-Duesquare-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C9D5DFBF1F16FCAC00F50CC0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C1EC591F3D539D00E9E837 /* Ready.swift in Sources */,
 				C9AA7EFA1F2FC8C0000965DB /* Ball.swift in Sources */,
 				C9AA7EF81F2F9535000965DB /* chartboost.m in Sources */,
 				C9B484CE1F2D44D8003085C2 /* Homescreen.swift in Sources */,
@@ -413,6 +523,7 @@
 				C97C7AFF1F30CB0B00802492 /* LevelScene.swift in Sources */,
 				C9D5DFC71F16FCAC00F50CC0 /* AppDelegate.swift in Sources */,
 				C9AA7EFE1F2FC9E1000965DB /* Funnel.swift in Sources */,
+				C9C1EC571F3CD6E800E9E837 /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,7 +588,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -485,7 +598,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -511,9 +628,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -527,7 +646,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -535,7 +656,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -554,14 +679,17 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		C9D5DFF21F16FCAC00F50CC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C4F09D510319A4B8547CB4A /* Pods-Duesquare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -579,13 +707,15 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Duesquare-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		C9D5DFF31F16FCAC00F50CC0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCDAD2A38EE3578C37693392 /* Pods-Duesquare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -602,7 +732,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Omdal.Duesquare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Duesquare-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -616,7 +747,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Omdal.DuesquareTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Duesquare.app/Duesquare";
 			};
 			name = Debug;
@@ -630,7 +762,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Omdal.DuesquareTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Duesquare.app/Duesquare";
 			};
 			name = Release;
@@ -643,7 +776,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Omdal.DuesquareUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = Duesquare;
 			};
 			name = Debug;
@@ -656,7 +790,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Omdal.DuesquareUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = Duesquare;
 			};
 			name = Release;

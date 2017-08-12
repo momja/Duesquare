@@ -16,7 +16,7 @@ extension GameScene {
             super.init(texture: circleTexture, color: UIColor.clear, size: circleTexture.size())
             self.physicsBody = SKPhysicsBody(circleOfRadius: self.frame.size.height/2 + 1)
             self.physicsBody?.restitution = 0.05
-            //            self.physicsBody?.friction = 0.0
+            self.physicsBody?.linearDamping = 0.3
             self.physicsBody?.usesPreciseCollisionDetection = true
             let color = self.randomizeColor()
             self.color = color

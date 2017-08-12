@@ -9,10 +9,12 @@
 import UIKit
 import SpriteKit
 
-class GameViewController: UIViewController {
-
+class GameViewController: UIViewController, ChartboostDelegate {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Chartboost.setAutoCacheAds(true)
         
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
@@ -28,7 +30,7 @@ class GameViewController: UIViewController {
             view.showsNodeCount = true
         }
     }
-
+    
     override var shouldAutorotate: Bool {
         return true
     }

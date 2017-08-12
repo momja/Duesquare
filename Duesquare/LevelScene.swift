@@ -15,7 +15,7 @@ class LevelScene: SKScene {
     var bestLevel = UserDefaults.standard.object(forKey: "bestLevel") as? Int
     
     override func didMove(to view: SKView) {
-        backButton.position = CGPoint(x: 100, y: -75)
+        backButton.position = CGPoint(x: 150, y: -100)
         backButton.zPosition = 100
         self.addChild(backButton)
         if UserDefaults.standard.object(forKey: "bestLevel") as? Int == nil {
@@ -27,7 +27,7 @@ class LevelScene: SKScene {
                 //create 15 LevelBlocks and give corresponding level values
                 let level = LevelButton(level: x + ((y - 1) * 3))
                 level.name = "Level_" + String(x + ((y - 1) * 3))
-                level.position = CGPoint(x: self.frame.width*CGFloat(x)/4, y: -self.frame.height*CGFloat(y)/6 + 50)
+                level.position = CGPoint(x: self.frame.width*CGFloat(x)/3 - self.frame.width/6, y: -self.frame.height*CGFloat(y + 1)/7)
                 self.addChild(level)
                 level.isHidden = true
                 level.animateLoad()
@@ -71,49 +71,15 @@ class LevelScene: SKScene {
         }
     }
     
-    class Button: SKNode {
-        
-        //run when touches are down inside
-        func animateAcceptedTouch() {
-            let action1 = SKTScaleEffect(node: self, duration: 0.15, startScale: CGPoint(x: 1.0, y: 1.0), endScale: CGPoint(x: 0.5, y: 0.5))
-            let action2 = SKTScaleEffect(node: self, duration: 0.15, startScale: CGPoint(x: 1.0, y: 1.0), endScale: CGPoint(x:2.0, y: 2.0))
-            action2.timingFunction = SKTTimingFunctionBackEaseOut(_:)
-            let sequence = SKAction.sequence([SKAction.actionWithEffect(action1), SKAction.actionWithEffect(action2)])
-            if !self.hasActions() {
-                self.run(sequence)
-            }
-        }
-        
-        func animateRejectedTouch() {
-            let action1 = SKTScaleEffect(node: self, duration: 0.2, startScale: CGPoint(x: 1.0, y: 1.0), endScale: CGPoint(x: 0.5, y: 0.5))
-            let action2 = SKTScaleEffect(node: self, duration: 0.2, startScale: CGPoint(x: 1.0, y: 1.0), endScale: CGPoint(x:2.0, y: 2.0))
-            action2.timingFunction = SKTTimingFunctionBackEaseOut(_:)
-            let sequence = SKAction.sequence([SKAction.actionWithEffect(action1), SKAction.actionWithEffect(action2)])
-            if !self.hasActions() {
-                self.run(sequence)
-            }
-        }
-        
-        //run with viewDidLoad
-        func animateLoad() {
-            self.isHidden = false
-            let action1 = SKTScaleEffect(node: self, duration: 0.5, startScale: CGPoint(x: 0.1, y: 0.1), endScale: CGPoint(x: 1.0, y: 1.0))
-            action1.timingFunction = SKTTimingFunctionElasticEaseOut(_:)
-            let sequence = SKAction.sequence([SKAction.actionWithEffect(action1)])
-            self.run(sequence)
-        }
-
-    }
-    
     class BackButton: Button {
         
         override init() {
-            let label = SKLabelNode(text: "Back")
-            label.fontSize = 72
+            let buttonTexture = SKTexture(image: #imageLiteral(resourceName: "back-button"))
+            let button = SKSpriteNode(texture: buttonTexture)
             
             super.init()
 
-            self.addChild(label)
+            self.addChild(button)
         }
         
         required init?(coder aDecoder: NSCoder) {
@@ -137,15 +103,18 @@ class LevelScene: SKScene {
         
         init(level: Int) {
             self.level = level
-            let texture = SKTexture(image: #imageLiteral(resourceName: "red_ball"))
+            let texture = SKTexture(image: #imageLiteral(resourceName: "level-button"))
             self.button = SKSpriteNode(texture: texture, size: texture.size())
 
             super.init()
             
             self.addChild(button)
             
-            let levelLabel = SKLabelNode(text: "Level " + String(level))
-            levelLabel.position.y = -100
+            let levelLabel = SKLabelNode(text: String(level))
+            levelLabel.fontSize = 72
+            levelLabel.fontName = "Hiragino Kaku Gothic StdN"
+            levelLabel.zPosition = 10
+            levelLabel.position.y = -levelLabel.fontSize/2 + 5
             self.addChild(levelLabel)
         }
         
@@ -192,5 +161,6 @@ class LevelScene: SKScene {
             }
         }
     }
-    
 }
+
+
