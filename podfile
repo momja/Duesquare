@@ -1,4 +1,0 @@
-platform :ios, '11.0'
-target 'Duesquare' do
-  pod "VungleSDK-iOS", "5.1.0"
-end

@@ -309,6 +309,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func gameOver() {
         let currentLoss = Int(countdownLabel.text!)
         if currentLoss == 1 {
+            aimStick.zRotation = 1/10*CGFloat.pi
+
             countdownLabel.text = String(0)
             
             self.gameover.moveAction(yLocation: 50)

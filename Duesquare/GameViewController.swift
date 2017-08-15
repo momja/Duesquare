@@ -26,8 +26,6 @@ class GameViewController: UIViewController, ChartboostDelegate {
                 view.presentScene(scene)
             }
             view.ignoresSiblingOrder = true
-            view.showsFPS = true
-            view.showsNodeCount = true
         }
     }
     

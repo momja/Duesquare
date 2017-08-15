@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		87EC82B14C07CD833532D3CD /* libPods-Duesquare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C0C613B1DF0FF98BC213F73 /* libPods-Duesquare.a */; };
 		C94DCEB01F30EA0A00524531 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94DCEA41F30EA0A00524531 /* CGFloat+Extensions.swift */; };
 		C94DCEB11F30EA0A00524531 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94DCEA51F30EA0A00524531 /* CGPoint+Extensions.swift */; };
 		C94DCEB21F30EA0A00524531 /* CGVector+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94DCEA61F30EA0A00524531 /* CGVector+Extensions.swift */; };
@@ -31,11 +30,6 @@
 		C9AA7EFA1F2FC8C0000965DB /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA7EF91F2FC8C0000965DB /* Ball.swift */; };
 		C9AA7EFC1F2FC926000965DB /* GameOverPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA7EFB1F2FC926000965DB /* GameOverPopup.swift */; };
 		C9AA7EFE1F2FC9E1000965DB /* Funnel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA7EFD1F2FC9E1000965DB /* Funnel.swift */; };
-		C9AD90B41F3791AC000496C4 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AD90B31F3791AC000496C4 /* AdSupport.framework */; };
-		C9AD90BA1F3791C1000496C4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AD90B91F3791C1000496C4 /* CFNetwork.framework */; };
-		C9AD90BC1F3791D2000496C4 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AD90BB1F3791D1000496C4 /* CoreMedia.framework */; };
-		C9AD90BE1F3791E2000496C4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AD90BD1F3791E2000496C4 /* libz.tbd */; };
-		C9AD90C01F3791ED000496C4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AD90BF1F3791EC000496C4 /* libsqlite3.tbd */; };
 		C9B484CE1F2D44D8003085C2 /* Homescreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B484CD1F2D44D8003085C2 /* Homescreen.swift */; };
 		C9B484D01F2D45F2003085C2 /* Homescreen.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9B484CF1F2D45F2003085C2 /* Homescreen.sks */; };
 		C9BE80CC1F322D9A0082C3CD /* ScoreParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9BE80CA1F322D9A0082C3CD /* ScoreParticle.sks */; };
@@ -77,7 +71,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1C0C613B1DF0FF98BC213F73 /* libPods-Duesquare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Duesquare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94DCEA41F30EA0A00524531 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		C94DCEA51F30EA0A00524531 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
 		C94DCEA61F30EA0A00524531 /* CGVector+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGVector+Extensions.swift"; sourceTree = "<group>"; };
@@ -102,14 +95,6 @@
 		C9AA7EF91F2FC8C0000965DB /* Ball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
 		C9AA7EFB1F2FC926000965DB /* GameOverPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverPopup.swift; sourceTree = "<group>"; };
 		C9AA7EFD1F2FC9E1000965DB /* Funnel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Funnel.swift; sourceTree = "<group>"; };
-		C9AD90B31F3791AC000496C4 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		C9AD90B51F3791B3000496C4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		C9AD90B91F3791C1000496C4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		C9AD90BB1F3791D1000496C4 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		C9AD90BD1F3791E2000496C4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		C9AD90BF1F3791EC000496C4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		C9AD90C31F3791FF000496C4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		C9AD90C51F37920E000496C4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C9B484CD1F2D44D8003085C2 /* Homescreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Homescreen.swift; path = ../Homescreen.swift; sourceTree = "<group>"; };
 		C9B484CF1F2D45F2003085C2 /* Homescreen.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Homescreen.sks; sourceTree = "<group>"; };
 		C9BE80CA1F322D9A0082C3CD /* ScoreParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ScoreParticle.sks; sourceTree = "<group>"; };
@@ -145,17 +130,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9AA7EF41F2F9414000965DB /* UIKit.framework in Frameworks */,
-				C9AD90C01F3791ED000496C4 /* libsqlite3.tbd in Frameworks */,
-				C9AD90BE1F3791E2000496C4 /* libz.tbd in Frameworks */,
-				C9AD90BC1F3791D2000496C4 /* CoreMedia.framework in Frameworks */,
 				C9AA7EF21F2F940D000965DB /* CoreGraphics.framework in Frameworks */,
-				C9AD90BA1F3791C1000496C4 /* CFNetwork.framework in Frameworks */,
-				C9AD90B41F3791AC000496C4 /* AdSupport.framework in Frameworks */,
 				C9AA7EF01F2F9402000965DB /* Foundation.framework in Frameworks */,
 				C9AA7EEE1F2F93FC000965DB /* StoreKit.framework in Frameworks */,
 				C9F7A7721F2A60EF002531A8 /* GameKit.framework in Frameworks */,
 				C9AA7EEC1F2F93D7000965DB /* Chartboost.framework in Frameworks */,
-				87EC82B14C07CD833532D3CD /* libPods-Duesquare.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,21 +250,12 @@
 		C9DFA46E1F28508A00317E56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C9AD90C51F37920E000496C4 /* SystemConfiguration.framework */,
-				C9AD90C31F3791FF000496C4 /* QuartzCore.framework */,
-				C9AD90BF1F3791EC000496C4 /* libsqlite3.tbd */,
-				C9AD90BD1F3791E2000496C4 /* libz.tbd */,
-				C9AD90BB1F3791D1000496C4 /* CoreMedia.framework */,
-				C9AD90B91F3791C1000496C4 /* CFNetwork.framework */,
-				C9AD90B51F3791B3000496C4 /* AudioToolbox.framework */,
-				C9AD90B31F3791AC000496C4 /* AdSupport.framework */,
 				C9AA7EF31F2F9414000965DB /* UIKit.framework */,
 				C9AA7EF11F2F940D000965DB /* CoreGraphics.framework */,
 				C9AA7EEF1F2F9402000965DB /* Foundation.framework */,
 				C9AA7EED1F2F93FC000965DB /* StoreKit.framework */,
 				C9AA7EEB1F2F93D7000965DB /* Chartboost.framework */,
 				C9F7A7711F2A60EF002531A8 /* GameKit.framework */,
-				1C0C613B1DF0FF98BC213F73 /* libPods-Duesquare.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -297,12 +267,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9D5DFF11F16FCAC00F50CC0 /* Build configuration list for PBXNativeTarget "Duesquare" */;
 			buildPhases = (
-				25494A4442F73BEB544E22E4 /* [CP] Check Pods Manifest.lock */,
 				C9D5DFBF1F16FCAC00F50CC0 /* Sources */,
 				C9D5DFC01F16FCAC00F50CC0 /* Frameworks */,
 				C9D5DFC11F16FCAC00F50CC0 /* Resources */,
-				57AD532C8D8B8D7FDC91EA18 /* [CP] Embed Pods Frameworks */,
-				7E49C11F2F333C661D525F56 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -362,7 +329,7 @@
 					C9D5DFC21F16FCAC00F50CC0 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = EHPBHF3VYQ;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
@@ -442,54 +409,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		25494A4442F73BEB544E22E4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		57AD532C8D8B8D7FDC91EA18 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Duesquare/Pods-Duesquare-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7E49C11F2F333C661D525F56 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Duesquare/Pods-Duesquare-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C9D5DFBF1F16FCAC00F50CC0 /* Sources */ = {
@@ -697,6 +616,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Duesquare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Omdal.Duesquare;
@@ -704,7 +624,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Duesquare-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -723,13 +643,14 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Duesquare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Omdal.Duesquare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Duesquare-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -744,7 +665,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Omdal.DuesquareTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Duesquare.app/Duesquare";
 			};
 			name = Debug;
@@ -759,7 +680,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Omdal.DuesquareTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Duesquare.app/Duesquare";
 			};
 			name = Release;
@@ -773,7 +694,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Omdal.DuesquareUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Duesquare;
 			};
 			name = Debug;
@@ -787,7 +708,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Omdal.DuesquareUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Duesquare;
 			};
 			name = Release;
